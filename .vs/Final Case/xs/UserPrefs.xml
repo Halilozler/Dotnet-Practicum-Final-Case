@@ -1,11 +1,15 @@
 ﻿<Properties StartupConfiguration="{C4620BE3-E901-4D10-9624-67F6EC88A599}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Final_220Case PreferredExecutionTarget="/Applications/Opera.app" FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Final.Dto FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Final_220Case PreferredExecutionTarget="/Applications/Opera.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Final.Data FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Final.Service FirstBuild="True" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Final.Base FirstBuild="True" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
