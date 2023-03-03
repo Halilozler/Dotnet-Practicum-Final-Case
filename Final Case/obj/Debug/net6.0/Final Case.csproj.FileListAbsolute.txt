@@ -1,0 +1,32 @@
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/bin/Debug/net6.0/appsettings.Development.json
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/bin/Debug/net6.0/appsettings.json
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/bin/Debug/net6.0/Final Case
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/bin/Debug/net6.0/Final Case.deps.json
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/bin/Debug/net6.0/Final Case.runtimeconfig.json
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/bin/Debug/net6.0/Final Case.dll
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/bin/Debug/net6.0/Final Case.pdb
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/bin/Debug/net6.0/Microsoft.OpenApi.dll
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/Final Case.csproj.AssemblyReference.cache
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/Final Case.GeneratedMSBuildEditorConfig.editorconfig
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/Final Case.AssemblyInfoInputs.cache
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/Final Case.AssemblyInfo.cs
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/Final Case.csproj.CoreCompileInputs.cache
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/Final Case.MvcApplicationPartsAssemblyInfo.cs
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/Final Case.MvcApplicationPartsAssemblyInfo.cache
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/staticwebassets/msbuild.Final Case.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/staticwebassets/msbuild.build.Final Case.props
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.Final Case.props
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.Final Case.props
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/staticwebassets.pack.json
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/staticwebassets.build.json
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/staticwebassets.development.json
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/scopedcss/bundle/Final Case.styles.css
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/Final Case.csproj.CopyComplete
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/Final Case.dll
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/refint/Final Case.dll
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/Final Case.pdb
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/Final Case.genruntimeconfig.cache
+/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/obj/Debug/net6.0/ref/Final Case.dll
