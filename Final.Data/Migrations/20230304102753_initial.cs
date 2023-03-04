@@ -20,7 +20,7 @@ namespace Final.Data.Migrations
                     Name = table.Column<string>(type: "VARCHAR(20)", nullable: false),
                     Surname = table.Column<string>(type: "VARCHAR(20)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    RoleId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

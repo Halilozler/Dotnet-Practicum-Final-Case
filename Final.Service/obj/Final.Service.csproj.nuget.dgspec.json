@@ -188,7 +188,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Base\\Final.Base.csproj": {
+                "projectPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Base\\Final.Base.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

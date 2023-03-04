@@ -1127,6 +1127,9 @@
         }
       },
       "Final.Dto/1.0.0": {
+        "dependencies": {
+          "Final.Base": "1.0.0"
+        },
         "runtime": {
           "Final.Dto.dll": {}
         }

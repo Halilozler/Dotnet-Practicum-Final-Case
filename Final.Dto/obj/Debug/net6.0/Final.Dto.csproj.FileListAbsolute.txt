@@ -22,3 +22,6 @@ C:\Users\ozler\OneDrive\Masaüstü\.Net-Practicum-Final-Case\Final.Dto\obj\Debug
 C:\Users\ozler\OneDrive\Masaüstü\.Net-Practicum-Final-Case\Final.Dto\obj\Debug\net6.0\refint\Final.Dto.dll
 C:\Users\ozler\OneDrive\Masaüstü\.Net-Practicum-Final-Case\Final.Dto\obj\Debug\net6.0\Final.Dto.pdb
 C:\Users\ozler\OneDrive\Masaüstü\.Net-Practicum-Final-Case\Final.Dto\obj\Debug\net6.0\ref\Final.Dto.dll
+C:\Users\ozler\OneDrive\Masaüstü\.Net-Practicum-Final-Case\Final.Dto\bin\Debug\net6.0\Final.Base.dll
+C:\Users\ozler\OneDrive\Masaüstü\.Net-Practicum-Final-Case\Final.Dto\bin\Debug\net6.0\Final.Base.pdb
+C:\Users\ozler\OneDrive\Masaüstü\.Net-Practicum-Final-Case\Final.Dto\obj\Debug\net6.0\Final.Dto.csproj.CopyComplete

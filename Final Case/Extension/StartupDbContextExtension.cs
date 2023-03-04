@@ -15,17 +15,12 @@ namespace Final_Case.Extension
                 var dbConfig = configuration.GetConnectionString("DefaultConnection");
                 
                 services.AddDbContext<AppDbContext>(options => options
-                   .UseSqlServer(dbConfig)
+                   .UseSqlServer(dbConfig, cf =>
+                   {
+                       //Otomtik migration oluşturulması için.
+                       cf.MigrationsAssembly("Final.Data");
+                   })
                    );
-                /*
-                services.AddDbContext<AppDbContext>(opt =>
-                {
-                    opt.UseSqlServer(dbtype, configure =>
-                    {
-                        //Otmatik migrations belirtiğimiz konumdan direk olarak alsın
-                        configure.MigrationsAssembly("Final.Data");
-                    });
-                });*/
                 /*
                 services.Configure<MongoDbSettings>(configuration.GetSection("MongoSettings"));
                 services.AddSingleton<IMongoDbSettings>(sp =>

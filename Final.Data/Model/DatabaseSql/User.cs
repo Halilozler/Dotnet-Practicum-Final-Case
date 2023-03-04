@@ -13,7 +13,7 @@ namespace Final.Data.Model.DatabaseSql
         [Column(TypeName = "VARCHAR(20)")]
         public string Surname { get; set; }
         public string Password { get; set; }
-        public string Role { get; set; }
+        public int RoleId { get; set; }
     }
 }
 
