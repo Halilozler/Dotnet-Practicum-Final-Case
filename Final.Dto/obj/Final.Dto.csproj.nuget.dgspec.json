@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Dto/Final.Dto.csproj": {}
+    "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Dto\\Final.Dto.csproj": {}
   },
   "projects": {
-    "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Base/Final.Base.csproj": {
+    "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Base\\Final.Base.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Base/Final.Base.csproj",
+        "projectUniqueName": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Base\\Final.Base.csproj",
         "projectName": "Final.Base",
-        "projectPath": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Base/Final.Base.csproj",
-        "packagesPath": "/Users/halilozler/.nuget/packages/",
-        "outputPath": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Base/obj/",
+        "projectPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Base\\Final.Base.csproj",
+        "packagesPath": "C:\\Users\\ozler\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Base\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/halilozler/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ozler\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,34 +61,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Dto/Final.Dto.csproj": {
+    "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Dto\\Final.Dto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Dto/Final.Dto.csproj",
+        "projectUniqueName": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Dto\\Final.Dto.csproj",
         "projectName": "Final.Dto",
-        "projectPath": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Dto/Final.Dto.csproj",
-        "packagesPath": "/Users/halilozler/.nuget/packages/",
-        "outputPath": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Dto/obj/",
+        "projectPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Dto\\Final.Dto.csproj",
+        "packagesPath": "C:\\Users\\ozler\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Dto\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/halilozler/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ozler\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Base/Final.Base.csproj": {
-                "projectPath": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Base/Final.Base.csproj"
+              "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Base\\Final.Base.csproj": {
+                "projectPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Base\\Final.Base.csproj"
               }
             }
           }
@@ -116,7 +120,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

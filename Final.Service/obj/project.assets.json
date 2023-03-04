@@ -5901,32 +5901,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/halilozler/.nuget/packages/": {}
+    "C:\\Users\\ozler\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Service/Final.Service.csproj",
+      "projectUniqueName": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Service\\Final.Service.csproj",
       "projectName": "Final.Service",
-      "projectPath": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Service/Final.Service.csproj",
-      "packagesPath": "/Users/halilozler/.nuget/packages/",
-      "outputPath": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Service/obj/",
+      "projectPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Service\\Final.Service.csproj",
+      "packagesPath": "C:\\Users\\ozler\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/halilozler/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ozler\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Data/Final.Data.csproj": {
-              "projectPath": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Data/Final.Data.csproj"
+            "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Data\\Final.Data.csproj": {
+              "projectPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Data\\Final.Data.csproj"
             }
           }
         }
@@ -5956,7 +5958,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

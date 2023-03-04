@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Final.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230304102753_initial")]
+    [Migration("20230304190256_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -25,6 +25,42 @@ namespace Final.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Final.Data.Model.DatabaseSql.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("VARCHAR(20)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Category");
+                });
+
+            modelBuilder.Entity("Final.Data.Model.DatabaseSql.Genre", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("VARCHAR(20)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Genre");
+                });
+
             modelBuilder.Entity("Final.Data.Model.DatabaseSql.ListItem", b =>
                 {
                     b.Property<int>("Id")
@@ -36,6 +72,9 @@ namespace Final.Data.Migrations
                     b.Property<short>("Amount")
                         .HasColumnType("SMALLINT");
 
+                    b.Property<int>("GenreId")
+                        .HasColumnType("int");
+
                     b.Property<int>("ListsId")
                         .HasColumnType("int");
 
@@ -46,10 +85,9 @@ namespace Final.Data.Migrations
                     b.Property<bool>("Receipt")
                         .HasColumnType("bit");
 
-                    b.Property<int>("TaypeId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("GenreId");
 
                     b.HasIndex("ListsId");
 
@@ -83,9 +121,29 @@ namespace Final.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoryId");
+
                     b.HasIndex("UserId");
 
                     b.ToTable("Lists");
+                });
+
+            modelBuilder.Entity("Final.Data.Model.DatabaseSql.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("VARCHAR(20)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Role");
                 });
 
             modelBuilder.Entity("Final.Data.Model.DatabaseSql.User", b =>
@@ -113,29 +171,58 @@ namespace Final.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("RoleId");
+
                     b.ToTable("User");
                 });
 
             modelBuilder.Entity("Final.Data.Model.DatabaseSql.ListItem", b =>
                 {
+                    b.HasOne("Final.Data.Model.DatabaseSql.Genre", "Genre")
+                        .WithMany()
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Final.Data.Model.DatabaseSql.Lists", "Lists")
                         .WithMany()
                         .HasForeignKey("ListsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Genre");
+
                     b.Navigation("Lists");
                 });
 
             modelBuilder.Entity("Final.Data.Model.DatabaseSql.Lists", b =>
                 {
+                    b.HasOne("Final.Data.Model.DatabaseSql.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Final.Data.Model.DatabaseSql.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Category");
+
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Final.Data.Model.DatabaseSql.User", b =>
+                {
+                    b.HasOne("Final.Data.Model.DatabaseSql.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
                 });
 #pragma warning restore 612, 618
         }
