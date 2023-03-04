@@ -8,9 +8,13 @@
 
   <ItemGroup>
     <None Remove="Dtos\" />
+    <None Remove="Dtos\Update\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Final.Base\Final.Base.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dtos\Update\" />
   </ItemGroup>
 </Project>

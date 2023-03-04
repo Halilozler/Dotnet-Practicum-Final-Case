@@ -18,7 +18,9 @@ namespace Final.Data.Model.DatabaseSql
         public Boolean Receipt { get; set; }
         [Column(TypeName = "SMALLINT")]
         public int Amount { get; set; }
-        public int TaypeId { get; set; }
+
+        public int GenreId { get; set; }
+        public Genre Genre { get; set; }
     }
 }
 

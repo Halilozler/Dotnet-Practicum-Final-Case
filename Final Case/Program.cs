@@ -1,4 +1,5 @@
-﻿using Final_Case.Extension;
+﻿using Final.Data.Context;
+using Final_Case.Extension;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+//Run DataGenerator
+using(var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    DataGenerator.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

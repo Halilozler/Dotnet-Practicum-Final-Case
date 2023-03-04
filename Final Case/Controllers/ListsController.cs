@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Final.Base.Response;
 using Final.Data.Model.DatabaseSql;
+using Final.Dto.Dtos.Create;
 using Final.Service.Abstract;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,13 +15,14 @@ namespace Final_Case.Controllers
     [ApiController]
     public class ListsController : CustomBaseController
     {
-        private readonly IListsService _service;
+        private readonly IListsService<CreateListDto> _service;
 
-        public ListsController(IListsService service)
+        public ListsController(IListsService<CreateListDto> service)
         {
             _service = service;
         }
 
+        /*
         [HttpPost]
         public async Task<IActionResult> Create(Lists dto)
         {
@@ -28,5 +30,6 @@ namespace Final_Case.Controllers
 
             return CreateActionResultInstance(response);
         }
+        */
     }
 }

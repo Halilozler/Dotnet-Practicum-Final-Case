@@ -13,11 +13,26 @@ namespace Final.Data.UnitOfWork
 
         public IGenericRepository<Lists> ListsRepository { get; private set; }
 
+        public IGenericRepository<ListItem> ListItemRepository { get; private set; }
+
+        public IGenericRepository<User> UserRepository { get; private set; }
+
+        public IGenericRepository<Category> CategoryRepository { get; private set; }
+
+        public IGenericRepository<Role> RoleRepository { get; private set; }
+
+        public IGenericRepository<Genre> GenreRepository { get; private set; }
+
         public UnitOfWork(AppDbContext dbContext)
         {
             this.dbContext = dbContext;
 
             ListsRepository = new GenericRepository<Lists>(dbContext);
+            ListItemRepository = new GenericRepository<ListItem>(dbContext);
+            UserRepository = new GenericRepository<User>(dbContext);
+            CategoryRepository = new GenericRepository<Category>(dbContext);
+            RoleRepository = new GenericRepository<Role>(dbContext);
+            GenreRepository = new GenericRepository<Genre>(dbContext);
         }
 
         public async Task CompleteAsync()

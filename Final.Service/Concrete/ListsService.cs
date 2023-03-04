@@ -1,4 +1,6 @@
 ﻿using System;
+using AutoMapper;
+using Final.Base.Model;
 using Final.Data.Model.DatabaseSql;
 using Final.Data.Repository.Sql.Abstract;
 using Final.Data.UnitOfWork;
@@ -6,14 +8,12 @@ using Final.Service.Abstract;
 
 namespace Final.Service.Concrete
 {
-	public class ListsService : BaseService<Lists, Lists>, IListsService
-	{
+	public class ListsService<ListsDto> : BaseService<ListsDto, Lists>, IListsService<ListsDto> where ListsDto : IDto
+    {
         private readonly IGenericRepository<Lists> _genericRepository;
-        //Mapperda eklenicek
 
-        public ListsService(IGenericRepository<Lists> genericRepository, IUnitOfWork unitOfWork) : base(genericRepository, unitOfWork)
+        public ListsService(IGenericRepository<Lists> genericRepository, IMapper mapper, IUnitOfWork unitOfWork) : base(genericRepository, mapper, unitOfWork)
         {
-            _genericRepository = genericRepository;
         }
     }
 }

@@ -10,11 +10,13 @@
     <None Remove="Attribute\" />
     <None Remove="Model\" />
     <None Remove="Response\" />
+    <None Remove="Validations\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Attribute\" />
     <Folder Include="Model\" />
     <Folder Include="Response\" />
+    <Folder Include="Validations\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
