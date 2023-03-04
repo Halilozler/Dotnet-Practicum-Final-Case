@@ -13,9 +13,19 @@ namespace Final_Case.Extension
             if (dbtype == "SQL-MONGO")
             {
                 var dbConfig = configuration.GetConnectionString("DefaultConnection");
+                
                 services.AddDbContext<AppDbContext>(options => options
                    .UseSqlServer(dbConfig)
                    );
+                /*
+                services.AddDbContext<AppDbContext>(opt =>
+                {
+                    opt.UseSqlServer(dbtype, configure =>
+                    {
+                        //Otmatik migrations belirtiğimiz konumdan direk olarak alsın
+                        configure.MigrationsAssembly("Final.Data");
+                    });
+                });*/
                 /*
                 services.Configure<MongoDbSettings>(configuration.GetSection("MongoSettings"));
                 services.AddSingleton<IMongoDbSettings>(sp =>
@@ -24,15 +34,6 @@ namespace Final_Case.Extension
                 });
                 */
             }
-            /*
-            else if (dbtype == "PostgreSQL")
-            {
-                var dbConfig = configuration.GetConnectionString("PostgreSqlConnection");
-                services.AddDbContext<AppDbContext>(options => options
-                   .UseNpgsql(dbConfig)
-                   );
-            }
-            */
         }
     }
 }

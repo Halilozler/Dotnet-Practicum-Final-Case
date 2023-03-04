@@ -8,7 +8,9 @@ namespace Final.Data.Model.DatabaseSql
 	{
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        [Column(TypeName = "VARCHAR(20)")]
         public string Name { get; set; }
+        [Column(TypeName = "VARCHAR(20)")]
         public string Surname { get; set; }
         public string Password { get; set; }
         public string Role { get; set; }
