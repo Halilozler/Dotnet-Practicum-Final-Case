@@ -1,5 +1,6 @@
 ﻿using System;
 using AutoMapper;
+using Final.Data.LoggerService;
 using Final.Data.Model.DatabaseSql;
 using Final.Data.Repository.Sql.Abstract;
 using Final.Data.Repository.Sql.Concrete;
@@ -19,13 +20,17 @@ namespace Final_Case.Extension
             //Dependency Injection
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+            services.AddSingleton<ILoggerService, SerialLogger>();
+
             //Repository
             services.AddScoped<IGenericRepository<Lists>, GenericRepository<Lists>>();
-            services.AddScoped<IGenericRepository<User>, GenericRepository<User>>();
+            //services.AddScoped<IGenericRepository<User>, GenericRepository<User>>();
             services.AddScoped<IGenericRepository<ListItem>, GenericRepository<ListItem>>();
             services.AddScoped<IGenericRepository<Category>, GenericRepository<Category>>();
             services.AddScoped<IGenericRepository<Role>, GenericRepository<Role>>();
             services.AddScoped<IGenericRepository<Genre>, GenericRepository<Genre>>();
+
+            services.AddScoped<IUserRepository, UserRepository>();
 
             //Service
             services.AddScoped<IListsService<CreateListDto>, ListsService<CreateListDto>>();

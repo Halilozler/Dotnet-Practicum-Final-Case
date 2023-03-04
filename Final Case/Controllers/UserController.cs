@@ -30,19 +30,23 @@ namespace Final_Case.Controllers
         //Create User
         [HttpPost("create")]
         public async Task<IActionResult> Create([FromBody] CreateUserDto dto)
-        {
+    {
             var role = await _roleService.GetByIdAsync(dto.RoleId);
-
+            if(role.IsSuccessful == false)
+            {
+                return CreateActionResultInstance(role);
+            }
             var response = await _createUserService.InsertAsync(dto);
 
             return CreateActionResultInstance(response);
         }
 
-        //User Query
+        //User var mı geriye token döndürecek.
+        //name ve password alıp kontrol edicek.
         [HttpPost]
         public async Task<IActionResult> Query([FromBody] UserDto dto)
         {
-            return null;
+            return CreateActionResultInstance(await _userService.Login(dto));
         }
     }
 }

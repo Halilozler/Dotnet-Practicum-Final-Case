@@ -36,7 +36,10 @@ namespace Final.Service.Concrete
             var tempEntity = await genericRepository.GetByIdAsync(id);
             // Mapping Entity to Resource
             var result = mapper.Map<Entity, Dto>(tempEntity);
-
+            if(result is null)
+            {
+                return BaseResponse<Dto>.Fail("Role Id Not Found", 404);
+            }
             return BaseResponse<Dto>.Success(result, 200);
         }
 

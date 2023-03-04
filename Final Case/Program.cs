@@ -1,14 +1,22 @@
 ﻿using Final.Data.Context;
 using Final_Case.Extension;
+using Final_Case.Middlewares;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
 
 //------------------------------------------------------//
 //Servisi ekledik.
 builder.Services.AddServiceDI();
 builder.Services.AddDbContextDI(builder.Configuration);
+//------------------------------------------------------//
+
+//------------------------------------------------------//
+// Initialize Logger
+builder.Host.UseSerilog();
+Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).CreateLogger();
+Log.Information("Application is starting.");
 //------------------------------------------------------//
 
 builder.Services.AddControllers();
@@ -35,6 +43,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+//custom Middlewera burada tanımlayıp çalıştırıyoruz.
+app.UseCustomExceptionMiddle();
 
 app.MapControllers();
 

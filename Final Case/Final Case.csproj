@@ -19,10 +19,12 @@
   <ItemGroup>
     <None Remove="Controllers\" />
     <None Remove="Extension\" />
+    <None Remove="Middlewares\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Extension\" />
+    <Folder Include="Middlewares\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Final.Service\Final.Service.csproj">

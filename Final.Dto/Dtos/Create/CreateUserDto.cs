@@ -14,6 +14,9 @@ namespace Final.Dto.Dtos.Create
         [StringLength(maximumLength: 20, MinimumLength = 2, ErrorMessage = "Invalid Name Lenght")]
         public string Name { get; set; }
         [Required]
+        [StringLength(maximumLength: 20, MinimumLength = 2, ErrorMessage = "Invalid Surname Lenght")]
+        public string Surname { get; set; }
+        [Required]
         [StringLength(maximumLength: 20, MinimumLength = 5, ErrorMessage = "Invalid Password Lenght")]
         public string Password { get; set; }
         [Required]

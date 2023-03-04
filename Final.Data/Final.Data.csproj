@@ -19,6 +19,7 @@
     <None Remove="Repository\Mongo\" />
     <None Remove="Repository\Mongo\Abstarct\" />
     <None Remove="Repository\Mongo\Concrete\" />
+    <None Remove="LoggerService\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Context\" />
@@ -33,6 +34,7 @@
     <Folder Include="Repository\Mongo\" />
     <Folder Include="Repository\Mongo\Abstarct\" />
     <Folder Include="Repository\Mongo\Concrete\" />
+    <Folder Include="LoggerService\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
@@ -49,6 +51,11 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="MongoDB.Driver" Version="2.19.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.2.0" />
+    <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+    <PackageReference Include="Serilog.Enrichers.Process" Version="2.0.2" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.4.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Final.Base\Final.Base.csproj" />

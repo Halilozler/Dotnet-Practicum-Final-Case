@@ -1,6 +1,7 @@
 ﻿using System;
 using AutoMapper;
 using Final.Data.Model.DatabaseSql;
+using Final.Dto.Dtos;
 using Final.Dto.Dtos.Create;
 
 namespace Final.Service.Mapper
@@ -10,7 +11,9 @@ namespace Final.Service.Mapper
 		public MappingProfile()
 		{
 			CreateMap<CreateUserDto, User>().ReverseMap();
-		}
+            CreateMap<UserDto, User>().ReverseMap();
+            CreateMap<RoleDto, Role>().ReverseMap();
+        }
 	}
 }
 
