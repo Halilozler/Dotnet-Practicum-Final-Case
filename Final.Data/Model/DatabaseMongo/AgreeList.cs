@@ -1,5 +1,6 @@
 ﻿using System;
 using Final.Base.Model;
+using Final.Dto.Dtos;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
@@ -16,14 +17,14 @@ namespace Final.Data.Model.DatabaseMongo
         [BsonRepresentation(BsonType.DateTime)]
         public DateTime CreatedDate { get; set; }
         [BsonRepresentation(BsonType.DateTime)]
-        public DateTime CompletionDate { get; set; }
+        public DateTime CompletionDate = DateTime.Now;
 
         //One to Many Product
-        public IList<Product> Products { get; }
+        public IEnumerable<ListItemDto> Items { get; set; }
 
         public int UserId { get; set; }
         public string Explain { get; set; }
-        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
     }
 }
 

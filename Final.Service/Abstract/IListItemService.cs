@@ -10,6 +10,8 @@ namespace Final.Service.Abstract
 	public interface IListItemService: IBaseService<CreateListItemDto, ListItem>
 	{
         Task<BaseResponse<UpdateListItemDto>> UpdateReceipt(int ItemId, int userId);
+        public Task<BaseResponse<List<ListItem>>> GetListItemByListId(int listId);
     }
+
 }
 

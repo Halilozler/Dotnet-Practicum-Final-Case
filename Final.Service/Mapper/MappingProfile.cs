@@ -1,5 +1,6 @@
 ﻿using System;
 using AutoMapper;
+using Final.Data.Model.DatabaseMongo;
 using Final.Data.Model.DatabaseSql;
 using Final.Dto.Dtos;
 using Final.Dto.Dtos.Create;
@@ -21,6 +22,8 @@ namespace Final.Service.Mapper
 
 			CreateMap<CreateListItemDto, ListItem>().ReverseMap();
             CreateMap<UpdateListItemDto, ListItem>().ReverseMap();
+
+			CreateMap<ListsDto, AgreeList>();
         }
 	}
 }

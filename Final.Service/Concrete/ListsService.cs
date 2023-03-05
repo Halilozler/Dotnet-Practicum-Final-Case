@@ -1,39 +1,40 @@
-﻿using System;
-using AutoMapper;
-using Final.Base.Model;
+﻿using AutoMapper;
 using Final.Base.Response;
+using Final.Data.Model.DatabaseMongo;
 using Final.Data.Model.DatabaseSql;
+using Final.Data.Repository.Mongo.Abstarct;
 using Final.Data.Repository.Sql.Abstract;
-using Final.Data.Repository.Sql.Concrete;
 using Final.Data.UnitOfWork;
 using Final.Dto.Dtos;
 using Final.Dto.Dtos.Create;
 using Final.Service.Abstract;
-using SharpCompress.Common;
 
 namespace Final.Service.Concrete
 {
     public class ListsService : BaseService<CreateListDto, Lists>, IListsService
     {
         private readonly IListsRepository _genericRepository;
-        private readonly IUserRepository _userRepository;
-        private readonly IListItemRepository _listItemRepository;
+        private readonly IUserService<UserDto> _userService;
+        private readonly IListItemService _listItemService; 
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly IAgreeListRepository _agreeRepository;
 
-        public ListsService(IListsRepository genericRepository,IUserRepository userRepository, IListItemRepository listItemRepository, IMapper mapper, IUnitOfWork unitOfWork) : base(genericRepository, mapper, unitOfWork)
+        public ListsService(IListsRepository genericRepository, IUserService<UserDto> userService, IMapper mapper, IUnitOfWork unitOfWork, IListItemService listItemService, IAgreeListRepository agreeRepository) : base(genericRepository, mapper, unitOfWork)
         {
             _genericRepository = genericRepository;
             _mapper = mapper;
-            _userRepository = userRepository;
-            _listItemRepository = listItemRepository;
+            _userService = userService;
             _unitOfWork = unitOfWork;
+            _listItemService = listItemService;
+            _agreeRepository = agreeRepository;
         }
 
         public async Task<BaseResponse<List<ListsDto>>> GetByUserIdAsync(int Userid)
         {
             //ilk user id var mı
-            var user = await _userRepository.GetByIdAsync(Userid);
+            //var user = await _userRepository.GetByIdAsync(Userid);
+            var user = await _userService.GetByIdAsync(Userid);
 
             if(user is null)
             {
@@ -53,13 +54,50 @@ namespace Final.Service.Concrete
                 ListsDto listsDto = new ListsDto();
                 listsDto = _mapper.Map<Lists, ListsDto>(item);
                 //burada bu listeye kayıtlı ListItem getirmem lazım.
-                var listItems = _listItemRepository.Where(x => x.ListsId == item.Id).ToList();
-
-                listsDto.Items = _mapper.Map<List<ListItem>, List<ListItemDto>>(listItems);
+                //var listItems = _listItemRepository.Where(x => x.ListsId == item.Id).ToList();
+                var listItems = await _listItemService.GetListItemByListId(item.Id);
+                listsDto.Items = _mapper.Map<List<ListItem>, List<ListItemDto>>(listItems.Data);
                 response.Add(listsDto);
             }
 
             return BaseResponse<List<ListsDto>>.Success(response, 200);
+        }
+
+        public async Task<BaseResponse<string>> CompleteList(int listId, int userId)
+        {
+            //first check if all list items are complete
+            var listItem = await _listItemService.GetListItemByListId(listId);
+            if(listItem.Data.Count == 0)
+                return BaseResponse<string>.Fail("first you need to add item", 406);
+
+            var checkListItem = listItem.Data.Where(x => x.Receipt == false).FirstOrDefault();
+            if(checkListItem is not null)
+                return BaseResponse<string>.Fail("Items in the list are not complete", 406);
+
+
+            //Hepsi tamam
+            //şimdi liste ilk başta mongoDb ye eklenicek sonra silinecek
+            var agreeList = await GetByListIdTurnAgreeListAsync(listId, listItem.Data);
+
+            //write mongoDb
+            agreeList.Data.Id = null;
+            var response = await _agreeRepository.CreateAsync(agreeList.Data);
+
+            //delete list and item
+            return await RemoveAsync(listId, userId);
+        }
+
+        public async Task<BaseResponse<AgreeList>> GetByListIdTurnAgreeListAsync(int listId, List<ListItem> listItems)
+        {
+            //find list.
+            Lists list = await _genericRepository.GetByIdAsync(listId);
+            if (list is null)
+                return BaseResponse<AgreeList>.Fail("list is not valid", 404);
+
+            var response = _mapper.Map<Lists, ListsDto>(list);
+            response.Items = _mapper.Map<List<ListItem>, List<ListItemDto>>(listItems).ToList();
+
+            return BaseResponse<AgreeList>.Success(_mapper.Map<ListsDto, AgreeList>(response),200);
         }
 
         public virtual async Task<BaseResponse<UpdateListDto>> UpdateAsync(int id, UpdateListDto updateResource, int userId)
@@ -99,10 +137,10 @@ namespace Final.Service.Concrete
             _genericRepository.RemoveAsync(tempEntity);
 
             //All items will be deleted when the list is deleted
-            var items = _listItemRepository.Where(x => x.ListsId == tempEntity.Id);
-            foreach (var item in items)
+            var items = await _listItemService.GetListItemByListId(tempEntity.Id);
+            foreach (var item in items.Data)
             {
-                _listItemRepository.RemoveAsync(item);
+                _listItemService.RemoveAsync(item.Id);
             }
 
             await _unitOfWork.CompleteAsync();

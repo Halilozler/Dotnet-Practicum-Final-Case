@@ -71,5 +71,14 @@ namespace Final_Case.Controllers
             var response = await _service.RemoveAsync(ListId, userId);
             return CreateActionResultInstance(response);
         }
+
+        [HttpGet("CompleteList/{listId}")]
+        [Authorize(Roles = "1")]
+        public async Task<IActionResult> CompleteList(int listId)
+        {
+            int userId = _identityService.GetUserId;
+            var response = await _service.CompleteList(listId, userId);
+            return CreateActionResultInstance(response);
+        }
     }
 }

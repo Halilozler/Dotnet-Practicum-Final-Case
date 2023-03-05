@@ -53,6 +53,12 @@ namespace Final.Service.Concrete
 
             return BaseResponse<UpdateListItemDto>.Success(resource, 200);
         }
+
+        public async Task<BaseResponse<List<ListItem>>> GetListItemByListId(int listId)
+        {
+            var items = genericRepository.Where(x => x.ListsId == listId).ToList();
+            return BaseResponse<List<ListItem>>.Success(items, 200); 
+        }
     }
 }
 

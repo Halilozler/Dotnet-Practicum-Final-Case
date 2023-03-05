@@ -22,6 +22,7 @@ builder.Services.AddHttpContextAccessor();
 //Servisi ekledik.
 builder.Services.AddServiceDI();
 builder.Services.AddDbContextDI(builder.Configuration);
+builder.Services.AddMongoContextDI(builder.Configuration);
 //------------------------------------------------------//
 
 //------------------------------------------------------//
@@ -30,8 +31,6 @@ builder.Host.UseSerilog();
 Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).CreateLogger();
 Log.Information("Application is starting.");
 //------------------------------------------------------//
-
-
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

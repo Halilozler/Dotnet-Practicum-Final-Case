@@ -3,6 +3,8 @@ using AutoMapper;
 using Final.Base.Services;
 using Final.Data.LoggerService;
 using Final.Data.Model.DatabaseSql;
+using Final.Data.Repository.Mongo.Abstarct;
+using Final.Data.Repository.Mongo.Concrete;
 using Final.Data.Repository.Sql.Abstract;
 using Final.Data.Repository.Sql.Concrete;
 using Final.Data.UnitOfWork;
@@ -27,6 +29,8 @@ namespace Final_Case.Extension
 
             services.AddSingleton<ILoggerService, SerialLogger>();
             services.AddScoped<IIdentityService, IdentityService>();
+
+            services.AddScoped<IAgreeListRepository, AgreeListRepository>();
 
             //Repository
             //services.AddScoped<IGenericRepository<Lists>, GenericRepository<Lists>>();

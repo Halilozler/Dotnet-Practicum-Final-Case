@@ -36,15 +36,18 @@ namespace Final_Case.Extension
                 });
                 */
 
-                /*
-                //conect mongoDB
-                services.Configure<MongoDbSettings>(configuration.GetSection("MongoSettings"));
-                services.AddSingleton<IMongoDbSettings>(sp =>
-                {
-                    return sp.GetRequiredService<IOptions<MongoDbSettings>>().Value;
-                });
-                */
+                
             }
+        }
+
+        public static void AddMongoContextDI(this IServiceCollection services, IConfiguration configuration)
+        {
+            //conect mongoDB
+            services.Configure<MongoDbSettings>(configuration.GetSection("MongoSettings"));
+            services.AddSingleton<IMongoDbSettings>(sp =>
+            {
+                return sp.GetRequiredService<IOptions<MongoDbSettings>>().Value;
+            });
         }
     }
 }
