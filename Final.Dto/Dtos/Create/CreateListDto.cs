@@ -12,7 +12,6 @@ namespace Final.Dto.Dtos.Create
         public string Name { get; set; }
 
         public DateTime CreateDate = DateTime.Now;
-        public int UserId { get; set; }
         public string Explain { get; set; }
         public int CategoryId { get; set; }
     }

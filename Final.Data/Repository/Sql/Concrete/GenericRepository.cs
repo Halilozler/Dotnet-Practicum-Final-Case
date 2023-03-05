@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Linq.Expressions;
 using Final.Base.Model;
 using Final.Data.Context;
 using Final.Data.Repository.Sql.Abstract;
 using Microsoft.EntityFrameworkCore;
+using SharpCompress.Common;
 
 namespace Final.Data.Repository.Sql.Concrete
 {
@@ -43,6 +45,11 @@ namespace Final.Data.Repository.Sql.Concrete
         {
             //Update
             _entities.Update(entity);
+        }
+
+        public IEnumerable<TEntity> Where(Expression<Func<TEntity, bool>> where)
+        {
+            return _entities.Where(where).AsQueryable();
         }
     }
 }

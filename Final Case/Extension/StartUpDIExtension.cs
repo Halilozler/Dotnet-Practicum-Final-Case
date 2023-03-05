@@ -10,11 +10,15 @@ using Final.Dto.Dtos.Create;
 using Final.Service.Abstract;
 using Final.Service.Concrete;
 using Final.Service.Mapper;
+using Final.Service.TokenOperations.Abstract;
+using Final.Service.TokenOperations.Concrete;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.OpenApi.Models;
 
 namespace Final_Case.Extension
 {
-	public static class StartUpDIExtension
-	{
+    public static class StartUpDIExtension
+    {
         public static void AddServiceDI(this IServiceCollection services)
         {
             //Dependency Injection
@@ -46,6 +50,9 @@ namespace Final_Case.Extension
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IGenreService, GenreService>();
 
+            //Token
+            services.AddScoped<ITokenManagementService, TokenManagementService>();
+
             //Mapper
             var mapperConfig = new MapperConfiguration(cfg =>
             {
@@ -53,6 +60,36 @@ namespace Final_Case.Extension
             });
             services.AddSingleton(mapperConfig.CreateMapper());
         }
-	}
+
+        public static void AddCustomizeSwagger(this IServiceCollection services)
+        {
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "List Appi Management", Version = "v1.0" });
+                c.OperationFilter<ExtensionSwaggerFileOperationFilter>();
+                //File eklenebilmesi için.
+                //ExtensionSwaggerFileOperationFilter
+                var securityScheme = new OpenApiSecurityScheme
+                {
+                    Name = "Techa Management for IT Company",
+                    Description = "Enter JWT Bearer token **_only_**",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer", // Must be lower case
+                    BearerFormat = "JWT",
+                    Reference = new OpenApiReference
+                    {
+                        Id = JwtBearerDefaults.AuthenticationScheme,
+                        Type = ReferenceType.SecurityScheme
+                    }
+                };
+                c.AddSecurityDefinition(securityScheme.Reference.Id, securityScheme);
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {securityScheme, new string[] { }}
+                });
+            });
+        }
+    }
 }
 

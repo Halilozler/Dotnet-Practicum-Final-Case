@@ -10,6 +10,7 @@ namespace Final.Data.Repository.Sql.Abstract
         void RemoveAsync(TEntity entity);
         void Update(TEntity entity);
         Task<IEnumerable<TEntity>> GetAllAsync();
+        IEnumerable<TEntity> Where(System.Linq.Expressions.Expression<Func<TEntity, bool>> where);
     }
 }
 

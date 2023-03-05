@@ -947,3 +947,4 @@ C:/Users/ozler/OneDrive/Masaüstü/.Net-Practicum-Final-Case/Final Case/obj/Debu
 /Users/halilozler/Desktop/Net-Final-Case/Final Case/obj/Debug/net6.0/Final Case.genruntimeconfig.cache
 /Users/halilozler/Desktop/Net-Final-Case/Final Case/obj/Debug/net6.0/ref/Final Case.dll
 /Users/halilozler/Desktop/Net-Final-Case/Final Case/bin/Debug/net6.0/Logs.json
+/Users/halilozler/Desktop/Net-Final-Case/Final Case/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll

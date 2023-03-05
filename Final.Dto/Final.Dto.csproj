@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Remove="Dtos\" />
     <None Remove="Dtos\Update\" />
+    <None Remove="Models\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,5 +17,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dtos\Update\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>

@@ -16,19 +16,32 @@ namespace Final.Service.Concrete
     {
         private readonly IUserRepository genericRepository;
         private readonly IMapper mapper;
+        private readonly IRoleService _roleService;
 
-        public UserService(IUserRepository genericRepository, IMapper mapper, IUnitOfWork unitOfWork) : base(genericRepository, mapper, unitOfWork)
+        public UserService(IUserRepository genericRepository, IMapper mapper, IUnitOfWork unitOfWork, IRoleService roleService) : base(genericRepository, mapper, unitOfWork)
         {
             this.genericRepository = genericRepository;
             this.mapper = mapper;
+            _roleService = roleService;
         }
-
+        /*
+        public override async Task<BaseResponse<TUserDto>> InsertAsync(TUserDto insertResource)
+        {
+            var role = await _roleService.GetByIdAsync(insertResource.RoleId);
+            if (role.IsSuccessful == false)
+            {
+                return role;
+            }
+            return;
+        }
+        */
         public async Task<BaseResponse<bool>> Login(UserDto dto)
         {
             var user = await genericRepository.Control(dto);
 
             if(user is not null)
             {
+                //token oluşturup dönmesi lazım.
                 return BaseResponse<bool>.Success(true, 200);
             }
             return BaseResponse<bool>.Fail("User not found", 404);

@@ -11,12 +11,14 @@
     <None Remove="Model\" />
     <None Remove="Response\" />
     <None Remove="Validations\" />
+    <None Remove="Jwt\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Attribute\" />
     <Folder Include="Model\" />
     <Folder Include="Response\" />
     <Folder Include="Validations\" />
+    <Folder Include="Jwt\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />

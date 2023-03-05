@@ -1,10 +1,19 @@
-﻿using Final.Data.Context;
+﻿using System.Text;
+using Final.Base.Jwt;
+using Final.Data.Context;
 using Final_Case.Extension;
 using Final_Case.Middlewares;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
+
+//Token
+var jwtConfig = builder.Configuration.GetSection("JwtConfig").Get<JwtConfig>();
+builder.Services.Configure<JwtConfig>(builder.Configuration.GetSection("JwtConfig"));
+builder.Services.AddJwtBearerAuthentication(jwtConfig);
 
 //------------------------------------------------------//
 //Servisi ekledik.
@@ -22,7 +31,11 @@ Log.Information("Application is starting.");
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+//delete this
+//builder.Services.AddSwaggerGen();
+//new Swagger
+builder.Services.AddCustomizeSwagger();
 
 var app = builder.Build();
 
@@ -41,6 +54,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
