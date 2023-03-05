@@ -22,7 +22,8 @@
           "Serilog.Enrichers.Environment": "2.2.0",
           "Serilog.Enrichers.Process": "2.0.2",
           "Serilog.Enrichers.Thread": "3.1.0",
-          "Serilog.Settings.Configuration": "3.4.0"
+          "Serilog.Settings.Configuration": "3.4.0",
+          "Serilog.Sinks.File": "5.0.0"
         },
         "runtime": {
           "Final.Data.dll": {}

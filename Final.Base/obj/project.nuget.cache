@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W83uS0Qg/axk0Db6b6Lg6UghHypGWyK8YIgAVR9zMtDlmzsSURkNunm9Qo58Bz72qyt9uTbWGsmBO2eS4DCl6A==",
+  "dgSpecHash": "3Bz6308gGKEXXuc3FU2vtVVO7BV/6xOH1DDHiIFb5QpKKyAdKQfRfsjR8W86mXPhU07y/BLLwiZgkQk0ScYdkw==",
   "success": true,
-  "projectFilePath": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Base/Final.Base.csproj",
+  "projectFilePath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Base/Final.Base.csproj",
   "expectedPackageFiles": [
     "/Users/halilozler/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.2.0/microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "/Users/halilozler/.nuget/packages/microsoft.aspnetcore.authentication.core/2.2.0/microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

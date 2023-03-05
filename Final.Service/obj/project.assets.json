@@ -1895,7 +1895,8 @@
           "Serilog.Enrichers.Environment": "2.2.0",
           "Serilog.Enrichers.Process": "2.0.2",
           "Serilog.Enrichers.Thread": "3.1.0",
-          "Serilog.Settings.Configuration": "3.4.0"
+          "Serilog.Settings.Configuration": "3.4.0",
+          "Serilog.Sinks.File": "5.0.0"
         },
         "compile": {
           "bin/placeholder/Final.Data.dll": {}
@@ -4934,11 +4935,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Service/Final.Service.csproj",
+      "projectUniqueName": "/Users/halilozler/Desktop/Net-Final-Case/Final.Service/Final.Service.csproj",
       "projectName": "Final.Service",
-      "projectPath": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Service/Final.Service.csproj",
+      "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Service/Final.Service.csproj",
       "packagesPath": "/Users/halilozler/.nuget/packages/",
-      "outputPath": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Service/obj/",
+      "outputPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Service/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/halilozler/.nuget/NuGet/NuGet.Config"
@@ -4953,8 +4954,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Data/Final.Data.csproj": {
-              "projectPath": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Data/Final.Data.csproj"
+            "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/Final.Data.csproj": {
+              "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/Final.Data.csproj"
             }
           }
         }

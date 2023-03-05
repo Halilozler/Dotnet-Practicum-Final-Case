@@ -4063,11 +4063,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Base/Final.Base.csproj",
+      "projectUniqueName": "/Users/halilozler/Desktop/Net-Final-Case/Final.Base/Final.Base.csproj",
       "projectName": "Final.Base",
-      "projectPath": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Base/Final.Base.csproj",
+      "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Base/Final.Base.csproj",
       "packagesPath": "/Users/halilozler/.nuget/packages/",
-      "outputPath": "/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final.Base/obj/",
+      "outputPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Base/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/halilozler/.nuget/NuGet/NuGet.Config"
