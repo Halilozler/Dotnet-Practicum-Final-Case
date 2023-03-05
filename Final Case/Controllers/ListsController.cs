@@ -54,6 +54,15 @@ namespace Final_Case.Controllers
             return CreateActionResultInstance(response);
         }
 
+        [HttpGet("search")]
+        [Authorize(Roles = "1")]
+        public async Task<IActionResult> SearchLists([FromQuery] string? name, string? catName)
+        {
+            int userId = _identityService.GetUserId;
+            var response = await _service.Search(userId, name, catName);
+            return CreateActionResultInstance(response);
+        }
+
         [HttpPut("{id}")]
         [Authorize(Roles = "1")]
         public async Task<IActionResult> UpdateList(int id, [FromBody] UpdateListDto dto)

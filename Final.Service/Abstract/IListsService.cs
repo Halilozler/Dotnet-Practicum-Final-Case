@@ -15,6 +15,8 @@ namespace Final.Service.Abstract
         public Task<BaseResponse<string>> RemoveAsync(int id, int userId);
         public Task<BaseResponse<string>> CompleteList(int listId, int userId);
         public Task<BaseResponse<AgreeList>> GetByListIdTurnAgreeListAsync(int listId, List<ListItem> listItems);
+        public Task<BaseResponse<List<AgreeList>>> AdminGetList();
+        public Task<BaseResponse<List<ListsDto>>> Search(int userId, string name, string catName);
     }
 }
 

@@ -1,40 +1,34 @@
 ﻿<Properties StartupConfiguration="{C4620BE3-E901-4D10-9624-67F6EC88A599}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="../../../Final Case/Controllers/UserController.cs" line="33" column="16" endLine="33" endColumn="66" offsetX="-1" offsetY="-1" expression="role.IsSuccessful" liveUpdate="False" />
-  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Final Case/Controllers/UserController.cs">
-    <Files>
-      <File FileName="Final Case/Controllers/UserController.cs" Line="31" Column="29" />
-      <File FileName="Final.Service/Mapper/MappingProfile.cs" Line="14" Column="36" />
-      <File FileName="Final.Service/Concrete/BaseService.cs" Line="41" Column="1" />
-      <File FileName="Final.Data/Repository/Sql/Concrete/GenericRepository.cs" Line="28" Column="1" />
-      <File FileName="Final.Base/Response/BaseResponse.cs" Line="26" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Final Case" expanded="True">
+          <Node name="Final Case" expanded="True" selected="True">
             <Node name="Final Case" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="UserController.cs" selected="True" />
-              </Node>
-            </Node>
-            <Node name="Final.Base" expanded="True">
-              <Node name="Response" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Extension" expanded="True" />
             </Node>
             <Node name="Final.Data" expanded="True">
               <Node name="Model" expanded="True">
+                <Node name="DatabaseMongo" expanded="True" />
                 <Node name="DatabaseSql" expanded="True" />
               </Node>
               <Node name="Repository" expanded="True">
-                <Node name="Sql" expanded="True">
+                <Node name="Mongo" expanded="True">
+                  <Node name="Abstarct" expanded="True" />
                   <Node name="Concrete" expanded="True" />
                 </Node>
               </Node>
             </Node>
+            <Node name="Final.Dto" expanded="True">
+              <Node name="Dtos" expanded="True">
+                <Node name="Create" expanded="True" />
+                <Node name="Update" expanded="True" />
+              </Node>
+            </Node>
             <Node name="Final.Service" expanded="True">
+              <Node name="Abstract" expanded="True" />
               <Node name="Concrete" expanded="True" />
               <Node name="Mapper" expanded="True" />
             </Node>
@@ -43,10 +37,14 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../Final Case/Controllers/UserController.cs" line="33" column="16" endLine="33" endColumn="66" offsetX="-1" offsetY="-1" expression="role.IsSuccessful" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/halilozler/Desktop/.Net-Practicum-Final-Case/Final Case/Controllers/UserController.cs" relfile="Final Case/Controllers/UserController.cs" line="33" column="1" />
+      <Breakpoint file="/Users/halilozler/Desktop/Net-Final-Case/Final.Service/Mapper/MappingProfile.cs" relfile="Final.Service/Mapper/MappingProfile.cs" line="19" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Final_220Case PreferredExecutionTarget="/Applications/Opera.app" />
 </Properties>

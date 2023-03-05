@@ -30,6 +30,20 @@ namespace Final.Service.Concrete
             _agreeRepository = agreeRepository;
         }
 
+        public async Task<BaseResponse<List<ListsDto>>> Search(int userId, string name, string catName)
+        {
+            List<Lists> lists;
+            if(name is null && catName is null)
+                lists = _genericRepository.Where(x => x.UserId == userId).ToList();
+            else if(name is null)
+                lists = _genericRepository.Where(x => x.CategoryName.Contains(catName) && x.UserId == userId).ToList();
+            else if(catName is null)
+                lists = _genericRepository.Where(x => x.Name.Contains(name) && x.UserId == userId).ToList();
+            else
+                lists = _genericRepository.Where(x => x.Name.Contains(name) && x.CategoryName.Contains(catName) && x.UserId == userId).ToList();
+            return BaseResponse<List<ListsDto>>.Success(_mapper.Map<List<Lists>, List<ListsDto>>(lists), 200);
+        }
+
         public async Task<BaseResponse<List<ListsDto>>> GetByUserIdAsync(int Userid)
         {
             //ilk user id var mı
@@ -81,6 +95,7 @@ namespace Final.Service.Concrete
 
             //write mongoDb
             agreeList.Data.Id = null;
+            agreeList.Data.CompletionDate = DateTime.Now;
             var response = await _agreeRepository.CreateAsync(agreeList.Data);
 
             //delete list and item
@@ -146,6 +161,11 @@ namespace Final.Service.Concrete
             await _unitOfWork.CompleteAsync();
 
             return BaseResponse<string>.Success("Delete success", 204);
+        }
+
+        public async Task<BaseResponse<List<AgreeList>>> AdminGetList()
+        {
+            return await _agreeRepository.GetAllAsync();
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Final.Data.Model.DatabaseMongo
         [BsonRepresentation(BsonType.DateTime)]
         public DateTime CreatedDate { get; set; }
         [BsonRepresentation(BsonType.DateTime)]
-        public DateTime CompletionDate = DateTime.Now;
+        public DateTime CompletionDate { get; set; }
 
         //One to Many Product
         public IEnumerable<ListItemDto> Items { get; set; }

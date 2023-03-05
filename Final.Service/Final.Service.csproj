@@ -10,7 +10,6 @@
     <None Remove="Mapper\" />
     <None Remove="Abstract\" />
     <None Remove="Concrete\" />
-    <None Remove="MongoService\" />
     <None Remove="TokenOperations\" />
     <None Remove="TokenOperations\Abstract\" />
     <None Remove="TokenOperations\Concrete\" />
@@ -19,7 +18,6 @@
     <Folder Include="Mapper\" />
     <Folder Include="Abstract\" />
     <Folder Include="Concrete\" />
-    <Folder Include="MongoService\" />
     <Folder Include="TokenOperations\" />
     <Folder Include="TokenOperations\Abstract\" />
     <Folder Include="TokenOperations\Concrete\" />
