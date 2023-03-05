@@ -1,5 +1,6 @@
 ﻿using System;
 using AutoMapper;
+using Final.Base.Services;
 using Final.Data.LoggerService;
 using Final.Data.Model.DatabaseSql;
 using Final.Data.Repository.Sql.Abstract;
@@ -25,28 +26,29 @@ namespace Final_Case.Extension
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddSingleton<ILoggerService, SerialLogger>();
+            services.AddScoped<IIdentityService, IdentityService>();
 
             //Repository
-            services.AddScoped<IGenericRepository<Lists>, GenericRepository<Lists>>();
+            //services.AddScoped<IGenericRepository<Lists>, GenericRepository<Lists>>();
             //services.AddScoped<IGenericRepository<User>, GenericRepository<User>>();
-            services.AddScoped<IGenericRepository<ListItem>, GenericRepository<ListItem>>();
-            services.AddScoped<IGenericRepository<Category>, GenericRepository<Category>>();
-            services.AddScoped<IGenericRepository<Role>, GenericRepository<Role>>();
-            services.AddScoped<IGenericRepository<Genre>, GenericRepository<Genre>>();
+            //services.AddScoped<IGenericRepository<ListItem>, GenericRepository<ListItem>>();
+            //services.AddScoped<IGenericRepository<Role>, GenericRepository<Role>>();
+            //services.AddScoped<IGenericRepository<Genre>, GenericRepository<Genre>>();
 
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IListsRepository, ListsRepository>();
+            services.AddScoped<IListItemRepository, ListItemRepository>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IGenreRepository, GenreRepository>();
 
             //Service
-            services.AddScoped<IListsService<CreateListDto>, ListsService<CreateListDto>>();
-            services.AddScoped<IListsService<UpdateListDto>, ListsService<UpdateListDto>>();
+            services.AddScoped<IListsService, ListsService>();
 
-            services.AddScoped<IListItemService<CreateListItemDto>, ListItemService<CreateListItemDto>>();
-            services.AddScoped<IListItemService<UpdateListItemDto>, ListItemService<UpdateListItemDto>>();
+            services.AddScoped<IListItemService, ListItemService>();
 
             services.AddScoped<IUserService<CreateUserDto>, UserService<CreateUserDto>>();
             services.AddScoped<IUserService<UserDto>, UserService<UserDto>>();
 
-            services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IGenreService, GenreService>();
 

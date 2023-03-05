@@ -9,10 +9,10 @@ namespace Final.Dto.Dtos.Create
 {
     public class CreateListItemDto : IDto
     {
-        public int ListId { get; set; }
+        public int ListsId { get; set; }
         public string ProductName { get; set; }
         public bool Receipt = false;
         public int Amount { get; set; }
-        public int TypeId { get; set; }
+        public int GenreId { get; set; }
     }
 }

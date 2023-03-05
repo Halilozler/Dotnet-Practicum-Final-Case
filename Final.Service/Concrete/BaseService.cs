@@ -45,52 +45,35 @@ namespace Final.Service.Concrete
 
         public virtual async Task<BaseResponse<Dto>> InsertAsync(Dto insertResource)
         {
-            try
-            {
-                // Mapping Resource to Entity
-                var tempEntity = mapper.Map<Dto, Entity>(insertResource);
+            // Mapping Resource to Entity
+            var tempEntity = mapper.Map<Dto, Entity>(insertResource);
 
-                await genericRepository.InsertAsync(tempEntity);
-                await unitOfWork.CompleteAsync();
+            await genericRepository.InsertAsync(tempEntity);
+            await unitOfWork.CompleteAsync();
 
-                var mapped = mapper.Map<Entity, Dto>(tempEntity);
+            var mapped = mapper.Map<Entity, Dto>(tempEntity);
 
-                return BaseResponse<Dto>.Success(mapped, 201);
-            }
-            catch (Exception ex)
-            {
-                //Log.Error(ex, "Saving_Error");
-                return BaseResponse<Dto>.Fail("Saving_Error", 500);
-            }
+            return BaseResponse<Dto>.Success(mapped, 201);
+            //Log.Error(ex, "Saving_Error");
         }
 
-        public virtual async Task<BaseResponse<Dto>> RemoveAsync(int id)
+        public virtual async Task<BaseResponse<string>> RemoveAsync(int id)
         {
-            try
-            {
-                // Validate Id is existent
+            // Validate Id is existent
                 var tempEntity = await genericRepository.GetByIdAsync(id);
                 if (tempEntity is null)
-                    return BaseResponse<Dto>.Fail("Id_NoData", 404);
+                    return BaseResponse<string>.Fail("Id_NoData", 404);
 
                 genericRepository.RemoveAsync(tempEntity);
                 await unitOfWork.CompleteAsync();
 
                 //return BaseResponse<Dto>.Success(mapper.Map<Entity, Dto>(tempEntity));
-                return null;
-            }
-            catch (Exception ex)
-            {
-                //Log.Error(ex, "Deleting_Error");
-                return BaseResponse<Dto>.Fail("Deleting_Error", 500);
-            }
+                return BaseResponse<string>.Success("Delete success", 204);
         }
 
         public virtual async Task<BaseResponse<Dto>> UpdateAsync(int id, Dto updateResource)
         {
-            try
-            {
-                // Validate Id is existent
+            // Validate Id is existent
                 var tempEntity = await genericRepository.GetByIdAsync(id);
                 if (tempEntity is null)
                     return BaseResponse<Dto>.Fail("NoData", 404);
@@ -104,12 +87,6 @@ namespace Final.Service.Concrete
                 var resource = mapper.Map<Entity, Dto>(mapped);
 
                 return BaseResponse<Dto>.Success(resource, 200);
-            }
-            catch (Exception ex)
-            {
-                //Log.Error(ex, "Updating_Error");
-                return BaseResponse<Dto>.Fail("Updating_Error", 500);
-            }
         }
 
     }

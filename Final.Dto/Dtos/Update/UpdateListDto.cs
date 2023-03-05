@@ -11,6 +11,6 @@ namespace Final.Dto.Dtos
     {
         public string Name { get; set; }
         public string Explain { get; set; }
-        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
     }
 }

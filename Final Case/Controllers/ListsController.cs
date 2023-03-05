@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Final.Base.Response;
+using Final.Base.Services;
 using Final.Data.Model.DatabaseSql;
 using Final.Dto.Dtos;
 using Final.Dto.Dtos.Create;
@@ -19,44 +20,56 @@ namespace Final_Case.Controllers
     [ApiController]
     public class ListsController : CustomBaseController
     {
-        private readonly IListsService<CreateListDto> _service;
+        private readonly IListsService _service;
+        private readonly IIdentityService _identityService;
 
-        public ListsController(IListsService<CreateListDto> service)
+        public ListsController(IListsService service, IIdentityService identityService)
         {
             _service = service;
+            _identityService = identityService;
         }
 
-        
+        //1 is Normal user
+        //2 is Admin
+
+        //List tamamlandı.
+        //Tamamlanan Liste mongo db getir.
+
         [HttpPost]
         [Authorize(Roles = "1")]
         public async Task<IActionResult> Create(CreateListDto dto)
         {
-            //Ben burada NameIdentifier kısmına Id koymuştum onu almak için yazdık.
-            var userId = (User.Identity as ClaimsIdentity).FindFirst(ClaimTypes.NameIdentifier).Value;
-            //yada
-            userId = (User.Identity as ClaimsIdentity).FindFirst("AccountId").Value;
-            return Ok();
+            int userId = _identityService.GetUserId;
+            dto.UserId = userId;
+            var response = await _service.InsertAsync(dto);
+            return CreateActionResultInstance(response);
         }
-        /*
+
         [HttpGet]
+        [Authorize(Roles = "1")]
         public async Task<IActionResult> GetLists()
         {
-            return CreateActionResultInstance(null);
+            int userId = _identityService.GetUserId;
+            var response = await _service.GetByUserIdAsync(userId);
+            return CreateActionResultInstance(response);
         }
 
-        [HttpPut]
-        public async Task<IActionResult> UpdateList([FromBody] UpdateListDto dto)
+        [HttpPut("{id}")]
+        [Authorize(Roles = "1")]
+        public async Task<IActionResult> UpdateList(int id, [FromBody] UpdateListDto dto)
         {
-            //userId
-            return CreateActionResultInstance(null);
+            int userId = _identityService.GetUserId;
+            var response = await _service.UpdateAsync(id, dto, userId);
+            return CreateActionResultInstance(response);
         }
 
-        [HttpDelete]
+        [HttpDelete("{ListId}")]
+        [Authorize(Roles = "1")]
         public async Task<IActionResult> DeleteList(int ListId)
         {
-
-            return CreateActionResultInstance(null);
+            int userId = _identityService.GetUserId;
+            var response = await _service.RemoveAsync(ListId, userId);
+            return CreateActionResultInstance(response);
         }
-        */
     }
 }

@@ -12,6 +12,7 @@
     <None Remove="Response\" />
     <None Remove="Validations\" />
     <None Remove="Jwt\" />
+    <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Attribute\" />
@@ -19,6 +20,7 @@
     <Folder Include="Response\" />
     <Folder Include="Validations\" />
     <Folder Include="Jwt\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />

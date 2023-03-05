@@ -12,7 +12,6 @@ namespace Final.Data.Context
         public DbSet<Lists> Lists { get; set; }
         public DbSet<ListItem> ListItem { get; set; }
         public DbSet<User> User { get; set; }
-        public DbSet<Category> Category { get; set; }
         public DbSet<Genre> Genre { get; set; }
         public DbSet<Role> Role { get; set; }
 

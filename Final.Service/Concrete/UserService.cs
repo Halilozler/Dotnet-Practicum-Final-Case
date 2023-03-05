@@ -4,6 +4,7 @@ using Final.Base.Model;
 using Final.Base.Response;
 using Final.Data.Model.DatabaseSql;
 using Final.Data.Repository.Sql.Abstract;
+using Final.Data.Repository.Sql.Concrete;
 using Final.Data.UnitOfWork;
 using Final.Dto.Dtos;
 using Final.Dto.Dtos.Create;
@@ -17,24 +18,36 @@ namespace Final.Service.Concrete
         private readonly IUserRepository genericRepository;
         private readonly IMapper mapper;
         private readonly IRoleService _roleService;
+        private readonly IUnitOfWork unitOfWork;
 
         public UserService(IUserRepository genericRepository, IMapper mapper, IUnitOfWork unitOfWork, IRoleService roleService) : base(genericRepository, mapper, unitOfWork)
         {
             this.genericRepository = genericRepository;
             this.mapper = mapper;
             _roleService = roleService;
+            this.unitOfWork = unitOfWork;
         }
-        /*
-        public override async Task<BaseResponse<TUserDto>> InsertAsync(TUserDto insertResource)
+
+        public virtual async Task<BaseResponse<TUserDto>> InsertAsync(CreateUserDto insertResource)
         {
-            var role = await _roleService.GetByIdAsync(insertResource.RoleId);
-            if (role.IsSuccessful == false)
+            // Mapping Resource to Entity
+            var tempEntity = mapper.Map<CreateUserDto, User>(insertResource);
+
+            var user = genericRepository.Where(x => x.Name == insertResource.Name).ToList();
+
+            if(user.Count() > 0)
             {
-                return role;
+                return BaseResponse<TUserDto>.Fail("Name is invalid", 404);
             }
-            return;
+
+            await genericRepository.InsertAsync(tempEntity);
+            await unitOfWork.CompleteAsync();
+
+            var mapped = mapper.Map<User, TUserDto>(tempEntity);
+
+            return BaseResponse<TUserDto>.Success(mapped, 201);
         }
-        */
+
         public async Task<BaseResponse<bool>> Login(UserDto dto)
         {
             var user = await genericRepository.Control(dto);

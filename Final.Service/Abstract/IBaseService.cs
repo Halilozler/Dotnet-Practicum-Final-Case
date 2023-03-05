@@ -10,7 +10,7 @@ namespace Final.Service.Abstract
         Task<BaseResponse<IEnumerable<Dto>>> GetAllAsync();
         Task<BaseResponse<Dto>> InsertAsync(Dto insertResource);
         Task<BaseResponse<Dto>> UpdateAsync(int id, Dto updateResource);
-        Task<BaseResponse<Dto>> RemoveAsync(int id);
+        Task<BaseResponse<string>> RemoveAsync(int id);
     }
 }
 

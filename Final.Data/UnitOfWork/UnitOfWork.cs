@@ -17,8 +17,6 @@ namespace Final.Data.UnitOfWork
 
         public IGenericRepository<User> UserRepository { get; private set; }
 
-        public IGenericRepository<Category> CategoryRepository { get; private set; }
-
         public IGenericRepository<Role> RoleRepository { get; private set; }
 
         public IGenericRepository<Genre> GenreRepository { get; private set; }
@@ -30,7 +28,6 @@ namespace Final.Data.UnitOfWork
             ListsRepository = new GenericRepository<Lists>(dbContext);
             ListItemRepository = new GenericRepository<ListItem>(dbContext);
             UserRepository = new GenericRepository<User>(dbContext);
-            CategoryRepository = new GenericRepository<Category>(dbContext);
             RoleRepository = new GenericRepository<Role>(dbContext);
             GenreRepository = new GenericRepository<Genre>(dbContext);
         }

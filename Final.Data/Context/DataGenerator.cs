@@ -28,13 +28,6 @@ namespace Final.Data.Context
 					new Genre { Name = "Gram" }
 					);
 
-				context.Category.AddRange(
-					new Category { Name = "Okul" },
-                    new Category { Name = "Ev" },
-                    new Category { Name = "Bahçe" },
-                    new Category { Name = "Mutfak" }
-					);
-
 				context.SaveChanges();
 			}
 		}

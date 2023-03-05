@@ -11,9 +11,9 @@ namespace Final.Service.Concrete
 {
 	public class GenreService : BaseService<GenreDto, Genre>, IGenreService
     {
-        private readonly IGenericRepository<Genre> genericRepository;
+        private readonly IGenreRepository genericRepository;
 
-        public GenreService(IGenericRepository<Genre> genericRepository, IMapper mapper, IUnitOfWork unitOfWork) : base(genericRepository, mapper, unitOfWork)
+        public GenreService(IGenreRepository genericRepository, IMapper mapper, IUnitOfWork unitOfWork) : base(genericRepository, mapper, unitOfWork)
         {
         }
     }

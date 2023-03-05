@@ -11,9 +11,9 @@ namespace Final.Service.Concrete
 {
 	public class RoleService : BaseService<RoleDto, Role>, IRoleService
     {
-        private readonly IGenericRepository<Role> genericRepository;
+        private readonly IRoleRepository genericRepository;
 
-        public RoleService(IGenericRepository<Role> genericRepository, IMapper mapper, IUnitOfWork unitOfWork) : base(genericRepository, mapper, unitOfWork)
+        public RoleService(IRoleRepository genericRepository, IMapper mapper, IUnitOfWork unitOfWork) : base(genericRepository, mapper, unitOfWork)
         {
         }
     }

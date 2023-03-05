@@ -9,7 +9,6 @@ namespace Final.Data.UnitOfWork
         IGenericRepository<Lists> ListsRepository { get; }
         IGenericRepository<ListItem> ListItemRepository { get; }
         IGenericRepository<User> UserRepository { get; }
-        IGenericRepository<Category> CategoryRepository { get; }
         IGenericRepository<Role> RoleRepository { get; }
         IGenericRepository<Genre> GenreRepository { get; }
 

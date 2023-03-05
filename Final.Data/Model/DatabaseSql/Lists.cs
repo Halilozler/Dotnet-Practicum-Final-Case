@@ -15,9 +15,8 @@ namespace Final.Data.Model.DatabaseSql
 		public User User { get; set; }
         [Column(TypeName = "VARCHAR(100)")]
         public string Explain { get; set; }
-
-		public int CategoryId { get; set; }
-		public Category Category { get; set; }
+        [Column(TypeName = "VARCHAR(50)")]
+        public string CategoryName { get; set; }
 	}
 }
 
