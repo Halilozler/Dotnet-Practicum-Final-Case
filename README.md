@@ -19,6 +19,11 @@ Execute solunda bulunan alandan oluşturmuş olduğumuz ListDb seçiyoruz ve Exe
 
 Artık programı kullanmaya başlayabiliriz.
 
+## Çalıştırma
+
+Proje içinde "Final Case" klasörü içine girdikten sonra `dotnet run` komutunu çalıştırın. <br/>
+https://localhost:7198 portundan çalışacaktır
+
 ## Veritabanı Şemamız
 ![sql-schema](https://user-images.githubusercontent.com/45699509/223167157-fb72c2ee-95dc-4a0a-a997-161a7005b107.png)
 
