@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hjNlSkcCj2O524nvFZSAZBUl+wwcG4h2DzrvoSDQzhpDUBcgKygcPb8qpEcYoybiBJfNy+fq8We7kwksIei6Vw==",
+  "dgSpecHash": "v6a7DsVMgdZYqBw0HCjvjxjKCPWexKBlW8IkrMApbpBUB+sMU1zHc/k8t9PRPBrdC6PTZHw+NKUFC87CBwjhGA==",
   "success": true,
-  "projectFilePath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Test/WebApi.UnitTests/WebApi.UnitTests.csproj",
+  "projectFilePath": "/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Test/WebApi.UnitTests/WebApi.UnitTests.csproj",
   "expectedPackageFiles": [
     "/Users/halilozler/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/halilozler/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.0/automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

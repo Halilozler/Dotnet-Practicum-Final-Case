@@ -5237,11 +5237,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/Final.Data.csproj",
+      "projectUniqueName": "/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Data/Final.Data.csproj",
       "projectName": "Final.Data",
-      "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/Final.Data.csproj",
+      "projectPath": "/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Data/Final.Data.csproj",
       "packagesPath": "/Users/halilozler/.nuget/packages/",
-      "outputPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/obj/",
+      "outputPath": "/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Data/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/halilozler/.nuget/NuGet/NuGet.Config"
@@ -5256,11 +5256,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/halilozler/Desktop/Net-Final-Case/Final.Base/Final.Base.csproj": {
-              "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Base/Final.Base.csproj"
+            "/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Base/Final.Base.csproj": {
+              "projectPath": "/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Base/Final.Base.csproj"
             },
-            "/Users/halilozler/Desktop/Net-Final-Case/Final.Dto/Final.Dto.csproj": {
-              "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Dto/Final.Dto.csproj"
+            "/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Dto/Final.Dto.csproj": {
+              "projectPath": "/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Dto/Final.Dto.csproj"
             }
           }
         }

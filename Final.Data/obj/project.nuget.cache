@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WzNFy/8L9SkFW5U67ZEqupUAbKiIWEHgEao1TLg8RBPb+foW7R2PQ/PaRQ8Fgs4u8/Eyu1OnqtD7TvKFDsJ9Dw==",
+  "dgSpecHash": "nLBMPOWBm9iMdi8WZgDP64X+huHDxqTknzc08UA9kJhlVhIayhVYGSpaba+PBS7tUyaJWNg9/dIs1UehoOXGIQ==",
   "success": true,
-  "projectFilePath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/Final.Data.csproj",
+  "projectFilePath": "/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Data/Final.Data.csproj",
   "expectedPackageFiles": [
     "/Users/halilozler/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/halilozler/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.0/automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

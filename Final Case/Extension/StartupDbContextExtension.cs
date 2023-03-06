@@ -38,6 +38,10 @@ namespace Final_Case.Extension
 
                 
             }
+            else if(dbtype == "INMEMORY")
+            {
+                services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase(databaseName: "ListDb"));
+            }
         }
 
         public static void AddMongoContextDI(this IServiceCollection services, IConfiguration configuration)

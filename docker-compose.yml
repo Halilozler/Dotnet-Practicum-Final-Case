@@ -1,0 +1,14 @@
+﻿version: "3.8"
+services:
+  list-sql-server:
+    image: mcr.microsoft.com/azure-sql-edge:latest
+  list-mongo-server:
+    image: mongo:latest
+  list-api:
+    image: listapi
+    build:
+      context:.
+      dockerfile: Final Case/Dockerfile
+volumes:
+  sql_volume:
+  mongo_volume:
