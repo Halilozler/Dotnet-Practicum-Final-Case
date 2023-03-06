@@ -1,1 +1,2 @@
 /Users/halilozler/Desktop/Net-Practicum-Final-Case/obj/Debug/docker-compose.dcproj.CoreCompileInputs.cache
+C:\Users\ozler\OneDrive\Masaüstü\.Net-Practicum-Final-Case\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
