@@ -14,11 +14,11 @@ MongoDb ayağa kaldırma komutu<br/>
 `docker run -d -p 27017:27017 --name list-mongo mongo:latest`
 
 3- Azure Sql içinde veritabanı tablolarımızı oluşturmamız lazım.(Microsoft SQL Server Management Studio programı için anlatılmıştır) 
-İlk olarak MSSQL Server management üzerinden ayağa kalkan veritabanımıza bağlanıyoruz. <br/>
+İlk olarak MSSQL Server management üzerinden ayağa kalkan Sql Serverimize bağlanıyoruz. <br/>
 ![Screenshot_1](https://user-images.githubusercontent.com/45699509/223200363-bd51a881-3a53-47d1-91bf-b9a6949e9a43.png) <br/>
 Şifremiz: MyPass@word
 
-Sonra ise veritabanımızda "ListDb" adında bir database oluşturuyoruz. Oluşturduktan sonra [query linki](https://github.com/Halilozler/.Net-Practicum-Final-Case/blob/master/script.sql) linkden queryi indirip mssql server managment aracılığı ile açıyoruz.
+Sonra ise serverimizde "ListDb" adında bir database oluşturuyoruz. Oluşturduktan sonra [query linki](https://github.com/Halilozler/.Net-Practicum-Final-Case/blob/master/script.sql) linkden queryi indirip mssql server managment aracılığı ile açıyoruz.
 
 Execute solunda bulunan alandan oluşturmuş olduğumuz ListDb seçiyoruz ve Execute basıyoruz.
 
