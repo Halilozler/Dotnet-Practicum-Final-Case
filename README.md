@@ -78,6 +78,6 @@ Liste arama <br/>
 Adminin bütün tamamlanan listeleri görmesi <br/>
 ![Screenshot 2023-03-06 at 19 58 39](https://user-images.githubusercontent.com/45699509/223178868-13e175f9-871c-4f82-8655-205c8e955749.png)<br/>
 
-Aynı formata kullanıcıda tamamladığı listeleri görebilir.
-
+Aynı formata kullanıcıda tamamladığı listeleri görebilir. <br/>
+Bunun yanında günceleme - silme gibi işlemlerin resmini koymadım.
 
