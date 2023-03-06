@@ -19,6 +19,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Logs.json = Logs.json
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{A1C56DE0-8FA3-49A0-9D42-99D8D9462ECD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.UnitTests", "Final.Test\WebApi.UnitTests\WebApi.UnitTests.csproj", "{B0B98954-D0BA-482E-8866-8DEBCF7736A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final.IntegrationTest", "Final.Test\Final.IntegrationTest\Final.IntegrationTest.csproj", "{BA87C30E-B947-487D-A394-5513666703C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,11 +51,23 @@ Global
 		{31C26A05-9AF9-429A-A557-4593ED2C6678}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31C26A05-9AF9-429A-A557-4593ED2C6678}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31C26A05-9AF9-429A-A557-4593ED2C6678}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0B98954-D0BA-482E-8866-8DEBCF7736A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B98954-D0BA-482E-8866-8DEBCF7736A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B98954-D0BA-482E-8866-8DEBCF7736A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B98954-D0BA-482E-8866-8DEBCF7736A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA87C30E-B947-487D-A394-5513666703C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA87C30E-B947-487D-A394-5513666703C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA87C30E-B947-487D-A394-5513666703C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA87C30E-B947-487D-A394-5513666703C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {01508FD4-2510-4CED-955D-79845528AD25}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B0B98954-D0BA-482E-8866-8DEBCF7736A3} = {A1C56DE0-8FA3-49A0-9D42-99D8D9462ECD}
+		{BA87C30E-B947-487D-A394-5513666703C1} = {A1C56DE0-8FA3-49A0-9D42-99D8D9462ECD}
 	EndGlobalSection
 EndGlobal

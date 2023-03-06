@@ -30,6 +30,13 @@ namespace Final.Service.Concrete
 
         public virtual async Task<BaseResponse<TUserDto>> InsertAsync(CreateUserDto insertResource)
         {
+            //role controle
+            var role = await _roleService.GetByIdAsync(insertResource.RoleId);
+            if (role.IsSuccessful == false)
+            {
+                return BaseResponse<TUserDto>.Fail("Role is not found", 404);
+            }
+
             // Mapping Resource to Entity
             var tempEntity = mapper.Map<CreateUserDto, User>(insertResource);
 
@@ -37,7 +44,8 @@ namespace Final.Service.Concrete
 
             if(user.Count() > 0)
             {
-                return BaseResponse<TUserDto>.Fail("Name is invalid", 404);
+                return BaseResponse<TUserDto>.Fail("Name is exists", 404);
+                //throw new InvalidOperationException("Name is exists");
             }
 
             await genericRepository.InsertAsync(tempEntity);

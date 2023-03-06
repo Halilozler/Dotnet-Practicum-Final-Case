@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OI1MfjDPtgMP7DnoxzFaKLzQG253vqint1xaxLQ2GbznBVlVu23WrqydLpVcInQHDD8Y8sT2LnRPk6vF4cl0kQ==",
+  "dgSpecHash": "WzNFy/8L9SkFW5U67ZEqupUAbKiIWEHgEao1TLg8RBPb+foW7R2PQ/PaRQ8Fgs4u8/Eyu1OnqtD7TvKFDsJ9Dw==",
   "success": true,
   "projectFilePath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/Final.Data.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,7 @@
     "/Users/halilozler/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.3/microsoft.entityframeworkcore.abstractions.7.0.3.nupkg.sha512",
     "/Users/halilozler/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.3/microsoft.entityframeworkcore.analyzers.7.0.3.nupkg.sha512",
     "/Users/halilozler/.nuget/packages/microsoft.entityframeworkcore.design/7.0.3/microsoft.entityframeworkcore.design.7.0.3.nupkg.sha512",
+    "/Users/halilozler/.nuget/packages/microsoft.entityframeworkcore.inmemory/7.0.3/microsoft.entityframeworkcore.inmemory.7.0.3.nupkg.sha512",
     "/Users/halilozler/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.3/microsoft.entityframeworkcore.relational.7.0.3.nupkg.sha512",
     "/Users/halilozler/.nuget/packages/microsoft.entityframeworkcore.sqlserver/7.0.3/microsoft.entityframeworkcore.sqlserver.7.0.3.nupkg.sha512",
     "/Users/halilozler/.nuget/packages/microsoft.entityframeworkcore.tools/7.0.3/microsoft.entityframeworkcore.tools.7.0.3.nupkg.sha512",

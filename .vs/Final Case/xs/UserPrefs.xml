@@ -1,50 +1,44 @@
 ﻿<Properties StartupConfiguration="{C4620BE3-E901-4D10-9624-67F6EC88A599}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Test.Final.IntegrationTest FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../Final Case/Controllers/UserController.cs" line="33" column="16" endLine="33" endColumn="66" offsetX="-1" offsetY="-1" expression="role.IsSuccessful" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.Final_220Case PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.ItemProperties.Test.WebApi.UnitTests PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Final Case" expanded="True" selected="True">
+          <Node name="Final Case" expanded="True">
+            <Node name="Test" expanded="True">
+              <Node name="Final.IntegrationTest" expanded="True" selected="True" />
+              <Node name="Final.IntegrationTest" expanded="True" />
+              <Node name="WebApi.UnitTests" expanded="True">
+                <Node name="Application" expanded="True" />
+                <Node name="TestSetup" expanded="True" />
+              </Node>
+            </Node>
             <Node name="Final Case" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Extension" expanded="True" />
             </Node>
-            <Node name="Final.Data" expanded="True">
-              <Node name="Model" expanded="True">
-                <Node name="DatabaseMongo" expanded="True" />
-                <Node name="DatabaseSql" expanded="True" />
-              </Node>
-              <Node name="Repository" expanded="True">
-                <Node name="Mongo" expanded="True">
-                  <Node name="Abstarct" expanded="True" />
-                  <Node name="Concrete" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
-            <Node name="Final.Dto" expanded="True">
-              <Node name="Dtos" expanded="True">
-                <Node name="Create" expanded="True" />
-                <Node name="Update" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="Final.Service" expanded="True">
-              <Node name="Abstract" expanded="True" />
-              <Node name="Concrete" expanded="True" />
-              <Node name="Mapper" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Final Case" expanded="True" selected="True">
+            <Node name="Test" expanded="True">
+              <Node name="WebApi.UnitTests" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="../../../Final Case/Controllers/UserController.cs" line="33" column="16" endLine="33" endColumn="66" offsetX="-1" offsetY="-1" expression="role.IsSuccessful" liveUpdate="False" />
-  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/halilozler/Desktop/Net-Final-Case/Final.Service/Mapper/MappingProfile.cs" relfile="Final.Service/Mapper/MappingProfile.cs" line="19" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Final_220Case PreferredExecutionTarget="/Applications/Opera.app" />
 </Properties>

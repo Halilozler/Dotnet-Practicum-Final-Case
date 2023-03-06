@@ -1,0 +1,473 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/halilozler/Desktop/Net-Final-Case/Final.Test/Final.IntegrationTest/Final.IntegrationTest.csproj": {}
+  },
+  "projects": {
+    "/Users/halilozler/Desktop/Net-Final-Case/Final Case/Final Case.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/halilozler/Desktop/Net-Final-Case/Final Case/Final Case.csproj",
+        "projectName": "Final Case",
+        "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final Case/Final Case.csproj",
+        "packagesPath": "/Users/halilozler/.nuget/packages/",
+        "outputPath": "/Users/halilozler/Desktop/Net-Final-Case/Final Case/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/halilozler/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/Final.Data.csproj": {
+                "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/Final.Data.csproj"
+              },
+              "/Users/halilozler/Desktop/Net-Final-Case/Final.Service/Final.Service.csproj": {
+                "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Service/Final.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.12, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/halilozler/Desktop/Net-Final-Case/Final.Base/Final.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/halilozler/Desktop/Net-Final-Case/Final.Base/Final.Base.csproj",
+        "projectName": "Final.Base",
+        "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Base/Final.Base.csproj",
+        "packagesPath": "/Users/halilozler/.nuget/packages/",
+        "outputPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Base/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/halilozler/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/Final.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/Final.Data.csproj",
+        "projectName": "Final.Data",
+        "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/Final.Data.csproj",
+        "packagesPath": "/Users/halilozler/.nuget/packages/",
+        "outputPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/halilozler/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/halilozler/Desktop/Net-Final-Case/Final.Base/Final.Base.csproj": {
+                "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Base/Final.Base.csproj"
+              },
+              "/Users/halilozler/Desktop/Net-Final-Case/Final.Dto/Final.Dto.csproj": {
+                "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Dto/Final.Dto.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.19.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Serilog.Enrichers.Process": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Serilog.Enrichers.Thread": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.27.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/halilozler/Desktop/Net-Final-Case/Final.Dto/Final.Dto.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/halilozler/Desktop/Net-Final-Case/Final.Dto/Final.Dto.csproj",
+        "projectName": "Final.Dto",
+        "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Dto/Final.Dto.csproj",
+        "packagesPath": "/Users/halilozler/.nuget/packages/",
+        "outputPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Dto/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/halilozler/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/halilozler/Desktop/Net-Final-Case/Final.Base/Final.Base.csproj": {
+                "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Base/Final.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/halilozler/Desktop/Net-Final-Case/Final.Service/Final.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/halilozler/Desktop/Net-Final-Case/Final.Service/Final.Service.csproj",
+        "projectName": "Final.Service",
+        "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Service/Final.Service.csproj",
+        "packagesPath": "/Users/halilozler/.nuget/packages/",
+        "outputPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Service/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/halilozler/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/Final.Data.csproj": {
+                "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Data/Final.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/halilozler/Desktop/Net-Final-Case/Final.Test/Final.IntegrationTest/Final.IntegrationTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/halilozler/Desktop/Net-Final-Case/Final.Test/Final.IntegrationTest/Final.IntegrationTest.csproj",
+        "projectName": "Final.IntegrationTest",
+        "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Test/Final.IntegrationTest/Final.IntegrationTest.csproj",
+        "packagesPath": "/Users/halilozler/.nuget/packages/",
+        "outputPath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Test/Final.IntegrationTest/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/halilozler/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/halilozler/Desktop/Net-Final-Case/Final Case/Final Case.csproj": {
+                "projectPath": "/Users/halilozler/Desktop/Net-Final-Case/Final Case/Final Case.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

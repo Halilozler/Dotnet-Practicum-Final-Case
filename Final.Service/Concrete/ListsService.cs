@@ -53,6 +53,7 @@ namespace Final.Service.Concrete
             if(user is null)
             {
                 return BaseResponse<List<ListsDto>>.Fail("User is not found", 500);
+                //throw new InvalidOperationException("User is not found");
             }
 
             var lists = _genericRepository.Where(x => x.UserId == Userid).ToList();

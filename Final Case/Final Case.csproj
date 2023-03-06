@@ -34,4 +34,7 @@
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Final.IntegrationTest" />
+  </ItemGroup>
 </Project>

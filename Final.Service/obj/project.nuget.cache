@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "S3NcPo1VDIiidxWx65azHjqvyoP1RCA7zqt60OdFX1b/0M7SdADTuvH9oaV9srTyeT0vPsQY0wuu7XqlKbLB9w==",
+  "dgSpecHash": "oCsqCxqSrfpeKg51fTpxcOVizvjReE8fDQIl7RMawUQNmALvMrNv/T+u7zsLIQeJ/SnsazyrNzHloEEVUGa49Q==",
   "success": true,
   "projectFilePath": "/Users/halilozler/Desktop/Net-Final-Case/Final.Service/Final.Service.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,7 @@
     "/Users/halilozler/.nuget/packages/microsoft.entityframeworkcore/7.0.3/microsoft.entityframeworkcore.7.0.3.nupkg.sha512",
     "/Users/halilozler/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.3/microsoft.entityframeworkcore.abstractions.7.0.3.nupkg.sha512",
     "/Users/halilozler/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.3/microsoft.entityframeworkcore.analyzers.7.0.3.nupkg.sha512",
+    "/Users/halilozler/.nuget/packages/microsoft.entityframeworkcore.inmemory/7.0.3/microsoft.entityframeworkcore.inmemory.7.0.3.nupkg.sha512",
     "/Users/halilozler/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.3/microsoft.entityframeworkcore.relational.7.0.3.nupkg.sha512",
     "/Users/halilozler/.nuget/packages/microsoft.entityframeworkcore.sqlserver/7.0.3/microsoft.entityframeworkcore.sqlserver.7.0.3.nupkg.sha512",
     "/Users/halilozler/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
