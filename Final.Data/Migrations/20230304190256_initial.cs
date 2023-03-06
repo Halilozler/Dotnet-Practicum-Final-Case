@@ -11,20 +11,7 @@ namespace Final.Data.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Category",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "VARCHAR(20)", maxLength: 20, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Category", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
+             migrationBuilder.CreateTable(
                 name: "Genre",
                 columns: table => new
                 {
@@ -82,17 +69,11 @@ namespace Final.Data.Migrations
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     Explain = table.Column<string>(type: "VARCHAR(100)", nullable: false),
-                    CategoryId = table.Column<int>(type: "int", nullable: false)
+                    CategoryName = table.Column<int>(type: "VARCHAR(50)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Lists", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Lists_Category_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Category",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Lists_User_UserId",
                         column: x => x.UserId,
@@ -141,11 +122,6 @@ namespace Final.Data.Migrations
                 column: "ListsId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Lists_CategoryId",
-                table: "Lists",
-                column: "CategoryId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Lists_UserId",
                 table: "Lists",
                 column: "UserId");
@@ -167,9 +143,6 @@ namespace Final.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Lists");
-
-            migrationBuilder.DropTable(
-                name: "Category");
 
             migrationBuilder.DropTable(
                 name: "User");

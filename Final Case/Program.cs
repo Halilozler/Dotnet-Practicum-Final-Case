@@ -4,6 +4,7 @@ using Final.Data.Context;
 using Final_Case.Extension;
 using Final_Case.Middlewares;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 

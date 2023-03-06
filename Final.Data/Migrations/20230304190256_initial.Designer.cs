@@ -24,26 +24,7 @@ namespace Final.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("Final.Data.Model.DatabaseSql.Category", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("VARCHAR(20)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Category");
-                });
-
-            modelBuilder.Entity("Final.Data.Model.DatabaseSql.Genre", b =>
+             modelBuilder.Entity("Final.Data.Model.DatabaseSql.Genre", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -102,9 +83,6 @@ namespace Final.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
@@ -121,7 +99,9 @@ namespace Final.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(50)");
 
                     b.HasIndex("UserId");
 
@@ -197,12 +177,6 @@ namespace Final.Data.Migrations
 
             modelBuilder.Entity("Final.Data.Model.DatabaseSql.Lists", b =>
                 {
-                    b.HasOne("Final.Data.Model.DatabaseSql.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Final.Data.Model.DatabaseSql.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")

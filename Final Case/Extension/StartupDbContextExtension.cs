@@ -18,10 +18,11 @@ namespace Final_Case.Extension
                 {
                     opt.UseSqlServer(dbConfig, configure =>
                     {
-                        //migrationu nereden alıcak onu belirtik bizim Infrastructure yerinde.
                         configure.MigrationsAssembly("Final.Data");
+                        
                     });
                 });
+
                 /*connect sql
                 services.AddDbContext<AppDbContext>(options => options
                    .UseSqlServer(dbConfig, cf =>
