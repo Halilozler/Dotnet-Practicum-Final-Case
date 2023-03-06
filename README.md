@@ -5,7 +5,7 @@
 1- Projemizde Veritabanları ihtiyac olduğundan ve bunları kısa yoldan çalıştırmak için Docker yüklü olmalıdır.<br/>
 [Docker yükleme linki](https://www.docker.com/)
 
-2- Docker kuruduktan sonra. Projemizde kullanılacak olan MongoDb ve Azure Sql ayağa kaldırıyoruz.
+2- Docker kuruduktan sonra. Projemizde kullanılacak olan MongoDb ve Azure Sql ayağa kaldırmak için aşağıda bulunan komutları komut satırında(CMD) sırası ile çalıştırıyoruz.
 
 Azure Sql ayağa kaldırma komutu <br/>
 `docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=MyPass@word" -e "MSSQL_PID=Developer" -e "MSSQL_USER=SA" -p 1433:1433 -d --name=sql mcr.microsoft.com/azure-sql-edge`
