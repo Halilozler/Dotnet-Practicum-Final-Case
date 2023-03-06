@@ -81,12 +81,21 @@ namespace Final_Case.Controllers
             return CreateActionResultInstance(response);
         }
 
-        [HttpGet("CompleteList/{listId}")]
+        [HttpPut("CompleteList/{listId}")]
         [Authorize(Roles = "1")]
         public async Task<IActionResult> CompleteList(int listId)
         {
             int userId = _identityService.GetUserId;
             var response = await _service.CompleteList(listId, userId);
+            return CreateActionResultInstance(response);
+        }
+
+        [HttpGet("CompleteList")]
+        [Authorize(Roles = "1")]
+        public async Task<IActionResult> GetCompleteList()
+        {
+            int userId = _identityService.GetUserId;
+            var response = await _service.GetCompleteList(userId);
             return CreateActionResultInstance(response);
         }
     }

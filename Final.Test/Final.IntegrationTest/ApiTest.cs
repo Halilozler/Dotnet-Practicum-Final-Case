@@ -16,6 +16,20 @@ namespace Final.IntegrationTest
 			_httpClient = webAppFactory.CreateDefaultClient();
 		}
 
+        [TestMethod]
+        public async Task TestUser()
+        {
+            // Act
+            var response = await _httpClient.GetAsync("/user/test");
+
+            var actualStatusCode = response.StatusCode;
+            var stringResult = await response.Content.ReadAsStringAsync();
+
+            // Assert
+            //Assert.AreEqual(200, actualStatusCode);
+            Assert.AreEqual("Test success", stringResult);
+        }
+
         /*Create test cannot be performed due to the SQL connection
         //[TestMethod]
 		public async Task CreateUser()
@@ -39,20 +53,6 @@ namespace Final.IntegrationTest
             Assert.AreEqual(201, actualStatusCode);
 		}
         */
-
-        [TestMethod]
-        public async Task TestUser()
-        {
-            // Act
-            var response = await _httpClient.GetAsync("/user/test/");
-
-            var actualStatusCode = response.StatusCode;
-            var stringResult = await response.Content.ReadAsStringAsync();
-
-            // Assert
-            //Assert.AreEqual(200, actualStatusCode);
-            Assert.AreEqual("Test success", stringResult);
-        }
     }
 }
 

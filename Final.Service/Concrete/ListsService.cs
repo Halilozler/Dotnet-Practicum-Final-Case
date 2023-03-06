@@ -78,6 +78,11 @@ namespace Final.Service.Concrete
             return BaseResponse<List<ListsDto>>.Success(response, 200);
         }
 
+        public async Task<BaseResponse<List<AgreeList>>> GetCompleteList(int userId)
+        {
+            return await _agreeRepository.GetByUserId(userId);
+        }
+
         public async Task<BaseResponse<string>> CompleteList(int listId, int userId)
         {
             //first check if all list items are complete
@@ -92,7 +97,7 @@ namespace Final.Service.Concrete
 
             //Hepsi tamam
             //şimdi liste ilk başta mongoDb ye eklenicek sonra silinecek
-            var agreeList = await GetByListIdTurnAgreeListAsync(listId, listItem.Data);
+            var agreeList = await GetByListIdTurnAgreeListAsync(listId, listItem.Data, userId);
 
             //write mongoDb
             agreeList.Data.Id = null;
@@ -103,7 +108,7 @@ namespace Final.Service.Concrete
             return await RemoveAsync(listId, userId);
         }
 
-        public async Task<BaseResponse<AgreeList>> GetByListIdTurnAgreeListAsync(int listId, List<ListItem> listItems)
+        public async Task<BaseResponse<AgreeList>> GetByListIdTurnAgreeListAsync(int listId, List<ListItem> listItems, int userId)
         {
             //find list.
             Lists list = await _genericRepository.GetByIdAsync(listId);
@@ -113,7 +118,9 @@ namespace Final.Service.Concrete
             var response = _mapper.Map<Lists, ListsDto>(list);
             response.Items = _mapper.Map<List<ListItem>, List<ListItemDto>>(listItems).ToList();
 
-            return BaseResponse<AgreeList>.Success(_mapper.Map<ListsDto, AgreeList>(response),200);
+            var agreeList = _mapper.Map<ListsDto, AgreeList>(response);
+            agreeList.UserId = userId;
+            return BaseResponse<AgreeList>.Success(agreeList,200);
         }
 
         public virtual async Task<BaseResponse<UpdateListDto>> UpdateAsync(int id, UpdateListDto updateResource, int userId)
