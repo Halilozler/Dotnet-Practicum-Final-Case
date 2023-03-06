@@ -1,0 +1,63 @@
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Final Case.deps.json
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Final Case.runtimeconfig.json
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/appsettings.Development.json
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/appsettings.json
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Logs.json
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Final Case
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Final Case.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Final.Base.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Final.Data.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.OpenApi.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.EntityFrameworkCore.SqlServer.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.EntityFrameworkCore.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/AutoMapper.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Final.Service.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Final.Dto.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.Extensions.Primitives.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Serilog.Extensions.Hosting.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Serilog.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Serilog.Extensions.Logging.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Serilog.Settings.Configuration.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.Extensions.DependencyModel.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Swashbuckle.AspNetCore.Swagger.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Newtonsoft.Json.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.IdentityModel.Tokens.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.EntityFrameworkCore.InMemory.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.Extensions.Options.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/System.Text.Json.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/MongoDB.Driver.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/MongoDB.Bson.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/MongoDB.Driver.Core.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/System.Text.Encodings.Web.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/System.IdentityModel.Tokens.Jwt.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.Data.SqlClient.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.Extensions.DependencyInjection.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.Extensions.Logging.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.Extensions.Caching.Memory.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.IdentityModel.Logging.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/MongoDB.Libmongocrypt.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/DnsClient.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/SharpCompress.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/ZstdSharp.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/AWSSDK.Core.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Snappier.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.Identity.Client.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Microsoft.IdentityModel.Abstractions.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Final Case.pdb
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Final.Base.pdb
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Final.Data.pdb
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Final.Service.pdb
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/bin/Debug/Final.Dto.pdb
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/obj/Debug/docker-compose.dcproj.AssemblyReference.cache
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/obj/Debug/docker-compose.dcproj.CoreCompileInputs.cache
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/obj/Debug/docker-compose.dcproj.CopyComplete

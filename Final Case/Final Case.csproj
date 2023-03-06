@@ -5,6 +5,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Final_Case</RootNamespace>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>4f1b5879-f54b-4e71-8fe0-769b244dbf32</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

@@ -389,3 +389,12 @@
 /Users/halilozler/Desktop/Net-Final-Case/Final.Test/WebApi.UnitTests/obj/Debug/net7.0/WebApi.UnitTests.pdb
 /Users/halilozler/Desktop/Net-Final-Case/Final.Test/WebApi.UnitTests/obj/Debug/net7.0/WebApi.UnitTests.genruntimeconfig.cache
 /Users/halilozler/Desktop/Net-Final-Case/Final.Test/WebApi.UnitTests/obj/Debug/net7.0/ref/WebApi.UnitTests.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Test/WebApi.UnitTests/bin/Debug/net7.0/CoverletSourceRootsMapping
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Test/WebApi.UnitTests/obj/Debug/net7.0/WebApi.UnitTests.csproj.AssemblyReference.cache
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Test/WebApi.UnitTests/obj/Debug/net7.0/WebApi.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Test/WebApi.UnitTests/obj/Debug/net7.0/WebApi.UnitTests.AssemblyInfoInputs.cache
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Test/WebApi.UnitTests/obj/Debug/net7.0/WebApi.UnitTests.AssemblyInfo.cs
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Test/WebApi.UnitTests/obj/Debug/net7.0/WebApi.UnitTests.csproj.CoreCompileInputs.cache
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Test/WebApi.UnitTests/obj/Debug/net7.0/WebApi.UnitTests.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Test/WebApi.UnitTests/obj/Debug/net7.0/refint/WebApi.UnitTests.dll
+/Users/halilozler/Desktop/Net-Practicum-Final-Case/Final.Test/WebApi.UnitTests/obj/Debug/net7.0/WebApi.UnitTests.pdb

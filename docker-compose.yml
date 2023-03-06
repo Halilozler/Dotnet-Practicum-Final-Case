@@ -1,14 +1,48 @@
 ﻿version: "3.8"
 services:
-  list-sql-server:
-    image: mcr.microsoft.com/azure-sql-edge:latest
-  list-mongo-server:
-    image: mongo:latest
-  list-api:
-    image: listapi
-    build:
-      context:.
-      dockerfile: Final Case/Dockerfile
+   listSqlServer:
+      image: mcr.microsoft.com/azure-sql-edge:latest
+      container_name: listSql
+      restart: always
+      ports:
+         - "1433:1433"
+      networks: 
+         - mynetwork
+      volumes:
+         - sql_volume:/var/opt/mssql
+      environment:
+         - "ACCEPT_EULA=1"
+         - "MSSQL_SA_PASSWORD=MyPass@word"
+         - "MSSQL_PID=Developer"
+         - "MSSQL_USER=SA"
+   listMongoServer:
+      image: mongo:latest
+      container_name: listMongo
+      restart: always
+      ports:
+         - "27017:27017"
+      networks: 
+         - mynetwork
+      volumes:
+         - mongo_volume:/data/db
+   listApi:
+      image: listapi
+      build:
+         context: .
+         dockerfile: Final Case/Dockerfile
+      environment:
+         - ASPNETCORE_ENVIRONMENT=Development
+      ports:
+         - "8001:443"
+      networks: 
+         - mynetwork
+      depends_on:
+         - listSqlServer
+         - listMongoServer
 volumes:
-  sql_volume:
-  mongo_volume:
+   sql_volume:
+   mongo_volume:
+
+networks:
+   mynetwork:
+      driver: bridge

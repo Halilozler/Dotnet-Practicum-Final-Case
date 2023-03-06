@@ -1,0 +1,69 @@
+name: dockercompose17486583703528937932
+services:
+  listApi:
+    build:
+      context: /Users/halilozler/Desktop/Net-Practicum-Final-Case
+      dockerfile: Final Case/Dockerfile
+    depends_on:
+      listMongoServer:
+        condition: service_started
+      listSqlServer:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings:DefaultConnection: Server=listSqlServer,1433; Database=ListDb;User=sa;Password=MyPass@word;Trusted_Connection=False;Pooling=true;TrustServerCertificate=true
+      MongoSettings:ConnectionString: listMongoServer
+    image: listapi
+    networks:
+      mynetwork: null
+    ports:
+    - mode: ingress
+      target: 443
+      published: "8001"
+      protocol: tcp
+  listMongoServer:
+    container_name: listMongo
+    image: mongo:latest
+    networks:
+      mynetwork: null
+    ports:
+    - mode: ingress
+      target: 27017
+      published: "27017"
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: volume
+      source: mongo_volume
+      target: /data/db
+      volume: {}
+  listSqlServer:
+    container_name: listSql
+    environment:
+      ACCEPT_EULA: "1"
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: MyPass@word
+      MSSQL_USER: SA
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    networks:
+      mynetwork: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "1433"
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: volume
+      source: sql_volume
+      target: /var/opt/mssql
+      volume: {}
+networks:
+  mynetwork:
+    name: dockercompose17486583703528937932_mynetwork
+    driver: bridge
+volumes:
+  mongo_volume:
+    name: dockercompose17486583703528937932_mongo_volume
+  sql_volume:
+    name: dockercompose17486583703528937932_sql_volume

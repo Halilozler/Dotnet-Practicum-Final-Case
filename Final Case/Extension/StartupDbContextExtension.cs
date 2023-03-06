@@ -14,8 +14,15 @@ namespace Final_Case.Extension
             if (dbtype == "SQL-MONGO")
             {
                 var dbConfig = configuration.GetConnectionString("DefaultConnection");
-
-                //connect sql
+                services.AddDbContext<AppDbContext>(opt =>
+                {
+                    opt.UseSqlServer(dbConfig, configure =>
+                    {
+                        //migrationu nereden alıcak onu belirtik bizim Infrastructure yerinde.
+                        configure.MigrationsAssembly("Final.Data");
+                    });
+                });
+                /*connect sql
                 services.AddDbContext<AppDbContext>(options => options
                    .UseSqlServer(dbConfig, cf =>
                    {
@@ -23,7 +30,7 @@ namespace Final_Case.Extension
                        //cf.MigrationsAssembly("Final.Data");
                    })
                    );
-
+                */
                 /*connect Redis
                 services.Configure<RedisSettings>(configuration.GetSection("RedisSettings"));
                 services.AddSingleton<RedisService>(sp =>
@@ -36,7 +43,7 @@ namespace Final_Case.Extension
                 });
                 */
 
-                
+
             }
             else if(dbtype == "INMEMORY")
             {

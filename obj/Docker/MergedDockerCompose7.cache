@@ -1,0 +1,109 @@
+name: dockercompose17486583703528937932
+services:
+  listApi:
+    build:
+      context: /Users/halilozler/Desktop/Net-Practicum-Final-Case
+      dockerfile: Final Case/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Final Case
+      target: base
+    container_name: Final_Case
+    depends_on:
+      listMongoServer:
+        condition: service_started
+      listSqlServer:
+        condition: service_started
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: listapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net6.0/Final
+        Case.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      mynetwork: null
+    ports:
+    - mode: ingress
+      target: 443
+      published: "8001"
+      protocol: tcp
+    tty: true
+    volumes:
+    - type: bind
+      source: /Users/halilozler/Desktop/Net-Practicum-Final-Case/Final Case
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: /Users/halilozler/Desktop/Net-Practicum-Final-Case
+      target: /src
+      bind:
+        create_host_path: true
+    - type: bind
+      source: /Users/halilozler/vsdbg/vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: /Users/halilozler/.nuget/packages/
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+  listMongoServer:
+    container_name: listMongo
+    image: mongo:latest
+    networks:
+      mynetwork: null
+    ports:
+    - mode: ingress
+      target: 27017
+      published: "27017"
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: volume
+      source: mongo_volume
+      target: /data/db
+      volume: {}
+  listSqlServer:
+    container_name: listSql
+    environment:
+      ACCEPT_EULA: "1"
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: MyPass@word
+      MSSQL_USER: SA
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    networks:
+      mynetwork: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "1433"
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: volume
+      source: sql_volume
+      target: /var/opt/mssql
+      volume: {}
+networks:
+  mynetwork:
+    name: dockercompose17486583703528937932_mynetwork
+    driver: bridge
+volumes:
+  mongo_volume:
+    name: dockercompose17486583703528937932_mongo_volume
+  sql_volume:
+    name: dockercompose17486583703528937932_sql_volume

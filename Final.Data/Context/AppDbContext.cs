@@ -14,13 +14,13 @@ namespace Final.Data.Context
         public DbSet<User> User { get; set; }
         public DbSet<Genre> Genre { get; set; }
         public DbSet<Role> Role { get; set; }
-        /*
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
-        */
+        
     }
 }
 
