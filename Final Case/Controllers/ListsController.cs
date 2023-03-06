@@ -63,21 +63,21 @@ namespace Final_Case.Controllers
             return CreateActionResultInstance(response);
         }
 
+        [HttpGet("CompleteList")]
+        [Authorize(Roles = "1")]
+        public async Task<IActionResult> GetCompleteList()
+        {
+            int userId = _identityService.GetUserId;
+            var response = await _service.GetCompleteList(userId);
+            return CreateActionResultInstance(response);
+        }
+
         [HttpPut("{id}")]
         [Authorize(Roles = "1")]
         public async Task<IActionResult> UpdateList(int id, [FromBody] UpdateListDto dto)
         {
             int userId = _identityService.GetUserId;
             var response = await _service.UpdateAsync(id, dto, userId);
-            return CreateActionResultInstance(response);
-        }
-
-        [HttpDelete("{ListId}")]
-        [Authorize(Roles = "1")]
-        public async Task<IActionResult> DeleteList(int ListId)
-        {
-            int userId = _identityService.GetUserId;
-            var response = await _service.RemoveAsync(ListId, userId);
             return CreateActionResultInstance(response);
         }
 
@@ -90,12 +90,12 @@ namespace Final_Case.Controllers
             return CreateActionResultInstance(response);
         }
 
-        [HttpGet("CompleteList")]
+        [HttpDelete("{ListId}")]
         [Authorize(Roles = "1")]
-        public async Task<IActionResult> GetCompleteList()
+        public async Task<IActionResult> DeleteList(int ListId)
         {
             int userId = _identityService.GetUserId;
-            var response = await _service.GetCompleteList(userId);
+            var response = await _service.RemoveAsync(ListId, userId);
             return CreateActionResultInstance(response);
         }
     }
