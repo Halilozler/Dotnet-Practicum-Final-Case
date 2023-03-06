@@ -161,3 +161,4 @@
 {"Timestamp":"2023-03-06T21:51:28.6470992+03:00","Level":"Information","MessageTemplate":"Application is starting.","Properties":{"MachineName":"DESKTOP-3TKKF6V","ProcessId":25988,"ThreadId":1,"ApplicationName":"Management-1"}}
 {"Timestamp":"2023-03-06T21:52:35.5676132+03:00","Level":"Information","MessageTemplate":"Application is starting.","Properties":{"MachineName":"DESKTOP-3TKKF6V","ProcessId":14304,"ThreadId":1,"ApplicationName":"Management-1"}}
 {"Timestamp":"2023-03-06T21:52:45.3333124+03:00","Level":"Information","MessageTemplate":"Application is starting.","Properties":{"MachineName":"DESKTOP-3TKKF6V","ProcessId":21928,"ThreadId":1,"ApplicationName":"Management-1"}}
+{"Timestamp":"2023-03-06T21:54:46.9124398+03:00","Level":"Information","MessageTemplate":"Application is starting.","Properties":{"MachineName":"DESKTOP-3TKKF6V","ProcessId":26536,"ThreadId":1,"ApplicationName":"Management-1"}}

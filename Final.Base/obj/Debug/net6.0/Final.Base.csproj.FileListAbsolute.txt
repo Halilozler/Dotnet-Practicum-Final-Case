@@ -46,3 +46,15 @@ C:\Users\ozler\OneDrive\Masaüstü\.Net-Practicum-Final-Case\Final.Base\obj\Debu
 C:\Users\ozler\OneDrive\Masaüstü\.Net-Practicum-Final-Case\Final.Base\obj\Debug\net6.0\refint\Final.Base.dll
 C:\Users\ozler\OneDrive\Masaüstü\.Net-Practicum-Final-Case\Final.Base\obj\Debug\net6.0\Final.Base.pdb
 C:\Users\ozler\OneDrive\Masaüstü\.Net-Practicum-Final-Case\Final.Base\obj\Debug\net6.0\ref\Final.Base.dll
+C:\Users\ozler\OneDrive\Masaüstü\Net\Final.Base\bin\Debug\net6.0\Final.Base.deps.json
+C:\Users\ozler\OneDrive\Masaüstü\Net\Final.Base\bin\Debug\net6.0\Final.Base.dll
+C:\Users\ozler\OneDrive\Masaüstü\Net\Final.Base\bin\Debug\net6.0\Final.Base.pdb
+C:\Users\ozler\OneDrive\Masaüstü\Net\Final.Base\obj\Debug\net6.0\Final.Base.csproj.AssemblyReference.cache
+C:\Users\ozler\OneDrive\Masaüstü\Net\Final.Base\obj\Debug\net6.0\Final.Base.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ozler\OneDrive\Masaüstü\Net\Final.Base\obj\Debug\net6.0\Final.Base.AssemblyInfoInputs.cache
+C:\Users\ozler\OneDrive\Masaüstü\Net\Final.Base\obj\Debug\net6.0\Final.Base.AssemblyInfo.cs
+C:\Users\ozler\OneDrive\Masaüstü\Net\Final.Base\obj\Debug\net6.0\Final.Base.csproj.CoreCompileInputs.cache
+C:\Users\ozler\OneDrive\Masaüstü\Net\Final.Base\obj\Debug\net6.0\Final.Base.dll
+C:\Users\ozler\OneDrive\Masaüstü\Net\Final.Base\obj\Debug\net6.0\refint\Final.Base.dll
+C:\Users\ozler\OneDrive\Masaüstü\Net\Final.Base\obj\Debug\net6.0\Final.Base.pdb
+C:\Users\ozler\OneDrive\Masaüstü\Net\Final.Base\obj\Debug\net6.0\ref\Final.Base.dll

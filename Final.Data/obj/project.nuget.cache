@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Jr+KhCE2Sv4L8hNrc/iWwbnPwnQKDta74Dges3Hv6twa9B71+nAgIH84h5g0/AOf+ttR6yzjZg5iBoYyllM4Pw==",
+  "dgSpecHash": "b2ZdybA+omGy3fGXmSZ+0y06hn1nrYsWK4+ZXbhbRa1FIgpIL3YbDhJCtAy0y/Q4Z33Ic+eQExiX0U1FGy4RpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Data\\Final.Data.csproj",
+  "projectFilePath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\Net\\Final.Data\\Final.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ozler\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ozler\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

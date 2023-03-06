@@ -5005,11 +5005,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Service\\Final.Service.csproj",
+      "projectUniqueName": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\Net\\Final.Service\\Final.Service.csproj",
       "projectName": "Final.Service",
-      "projectPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Service\\Final.Service.csproj",
+      "projectPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\Net\\Final.Service\\Final.Service.csproj",
       "packagesPath": "C:\\Users\\ozler\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Service\\obj\\",
+      "outputPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\Net\\Final.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ozler\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5026,8 +5026,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Data\\Final.Data.csproj": {
-              "projectPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Data\\Final.Data.csproj"
+            "C:\\Users\\ozler\\OneDrive\\Masaüstü\\Net\\Final.Data\\Final.Data.csproj": {
+              "projectPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\Net\\Final.Data\\Final.Data.csproj"
             }
           }
         }

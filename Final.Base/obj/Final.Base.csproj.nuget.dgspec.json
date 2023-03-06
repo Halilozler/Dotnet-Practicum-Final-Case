@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Base\\Final.Base.csproj": {}
+    "C:\\Users\\ozler\\OneDrive\\Masaüstü\\Net\\Final.Base\\Final.Base.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Base\\Final.Base.csproj": {
+    "C:\\Users\\ozler\\OneDrive\\Masaüstü\\Net\\Final.Base\\Final.Base.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Base\\Final.Base.csproj",
+        "projectUniqueName": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\Net\\Final.Base\\Final.Base.csproj",
         "projectName": "Final.Base",
-        "projectPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Base\\Final.Base.csproj",
+        "projectPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\Net\\Final.Base\\Final.Base.csproj",
         "packagesPath": "C:\\Users\\ozler\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\.Net-Practicum-Final-Case\\Final.Base\\obj\\",
+        "outputPath": "C:\\Users\\ozler\\OneDrive\\Masaüstü\\Net\\Final.Base\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ozler\\AppData\\Roaming\\NuGet\\NuGet.Config",
